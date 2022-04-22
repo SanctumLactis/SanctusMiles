@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1801892627277714888}
   - component: {fileID: 8146659816103199420}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: lblButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
     m_Right: 20
     m_Top: 20
     m_Bottom: 20
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
