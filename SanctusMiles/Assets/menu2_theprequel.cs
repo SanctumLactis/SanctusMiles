@@ -29,7 +29,7 @@ public class menu2_theprequel : MonoBehaviour
         playbuttonsAnimator.Play("ClickPlay_mainbuttonsmove");
     }
 
-    public void NewGame()
+    public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
