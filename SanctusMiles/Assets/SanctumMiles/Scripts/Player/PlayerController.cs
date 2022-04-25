@@ -5,33 +5,40 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
-    [SerializeField] float turnSpeed;
+    [SerializeField] float moveSpeed = 50;
+    [SerializeField] float turnSpeed = 50;
+
+    [SerializeField] Rigidbody2D rigidBody;
+
+    float move;
+    float turn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        transform.Rotate(Vector3.forward * -turn * turnSpeed * Time.deltaTime);
+        rigidBody.velocity = transform.right * move * moveSpeed * Time.deltaTime;
     }
 
-    void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        movement = context.ReadValue<float>();
-        rb.velocity = transform.right * Mathf.Clamp01(movement) * moveSpeed;
+        move = context.ReadValue<float>();
+        Debug.Log("Move: " + move);
     }
 
-    void OnTurn(InputAction.CallbackContext context)
+    public void OnTurn(InputAction.CallbackContext context)
     {
         turn = context.ReadValue<float>();
-        float rotation = -turn * turnSpeed;
-        transform.Rotate(Vector3.forward * rotation);
+        
+        Debug.Log("Turn: " + turn);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -50,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnSpecial(InputAction.CallbackContext context)
+    public void OnSpecial(InputAction.CallbackContext context)
     {
         switch (context.phase)
         {
