@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menu2_theprequel : MonoBehaviour
 {
 
     public GameObject playbuttons;
     public Animator playbuttonsAnimator;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,10 @@ public class menu2_theprequel : MonoBehaviour
     {
         playbuttons.SetActive(true);
         playbuttonsAnimator.Play("ClickPlay_mainbuttonsmove");
+    }
+
+    public void NewGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
