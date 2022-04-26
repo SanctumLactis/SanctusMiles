@@ -31,14 +31,14 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<float>();
-        Debug.Log("Move: " + move);
+        //Debug.Log("Move: " + move);
     }
 
     public void OnTurn(InputAction.CallbackContext context)
     {
         turn = context.ReadValue<float>();
         
-        Debug.Log("Turn: " + turn);
+        //Debug.Log("Turn: " + turn);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
