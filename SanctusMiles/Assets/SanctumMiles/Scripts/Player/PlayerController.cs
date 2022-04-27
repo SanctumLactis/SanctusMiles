@@ -24,8 +24,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void FixedUpdate()
+    {
         transform.Rotate(Vector3.forward * -turn * turnSpeed * Time.deltaTime);
         rigidBody.velocity = transform.right * move * moveSpeed * Time.deltaTime;
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
