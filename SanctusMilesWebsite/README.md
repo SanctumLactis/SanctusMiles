@@ -1,2 +1,2 @@
-# DevOps Flask Login
- A flask app with a database of users that can login.
+# Sanctus Miles Website
+ A website for the game Sanctum Miles.
