@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TmplStateDIA : StateDIA
+public class ZomberWanderState : StateDIA
 {
     // Runs on initialization
-    public TmplStateDIA(object mainScript) : base(mainScript)
+    public ZomberWanderState(object mainScript) : base(mainScript)
     {
 
     }
