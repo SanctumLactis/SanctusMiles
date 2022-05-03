@@ -112,7 +112,7 @@
                 {
                     "name": "",
                     "id": "803b9945-9ca2-4e7b-9f56-fb68af8890c1",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -123,7 +123,7 @@
                 {
                     "name": "",
                     "id": "5d2707df-ca87-4bda-ae21-31344f3c4e19",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -244,18 +244,7 @@
                 {
                     "name": "",
                     "id": "866b50f5-97be-465d-9ba4-f9ab39a4c855",
-                    "path": "<Keyboard>/minus",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a7f92a20-7e76-4687-8dc8-862d92a64d4d",
-                    "path": "<Keyboard>/numpad0",
+                    "path": "<Keyboard>/period",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -266,18 +255,7 @@
                 {
                     "name": "",
                     "id": "b9f03958-08ea-4ca2-aa39-410ffb1bc041",
-                    "path": "<Keyboard>/rightShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Special",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e10ec382-0f81-442a-9314-0598b4c60cee",
-                    "path": "<Keyboard>/numpadPeriod",
+                    "path": "<Keyboard>/comma",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

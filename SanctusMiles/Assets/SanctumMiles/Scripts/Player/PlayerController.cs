@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class PlayerController : MonoBehaviour
 
     float move;
     float turn;
+
+    public Animator anim;
+
+    public Collider2D playerCollider;
+    public Collider2D doorTrigger;
+    public string level1 = "Level uno";
 
 
     // Start is called before the first frame update
@@ -31,6 +38,8 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.forward * -turn * turnSpeed * Time.deltaTime);
         rigidBody.velocity = transform.right * move * moveSpeed * Time.deltaTime;
 
+
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -42,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public void OnTurn(InputAction.CallbackContext context)
     {
         turn = context.ReadValue<float>();
+
         
         //Debug.Log("Turn: " + turn);
     }
@@ -51,7 +61,9 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                // Button Pressed
+                anim.CrossFadeInFixedTime("swing left anim", 0);
+
+
                 break;
             case InputActionPhase.Performed:
                 // Action Performed
@@ -67,7 +79,10 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                // Button Pressed
+                if (playerCollider.IsTouching(doorTrigger))
+                {
+                    SceneManager.LoadScene(level1);
+                }
                 break;
             case InputActionPhase.Performed:
                 // Action Performed

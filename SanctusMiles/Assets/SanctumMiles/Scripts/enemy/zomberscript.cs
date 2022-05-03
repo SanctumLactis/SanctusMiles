@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class zomberscript : MonoBehaviour{
     public Transform player;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     private Rigidbody2D rb;
     private Vector2 movement;
 

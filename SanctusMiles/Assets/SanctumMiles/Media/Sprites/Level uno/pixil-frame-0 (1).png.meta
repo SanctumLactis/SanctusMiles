@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: 8f2210ced82af7f4faf651ceeb2abc77
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallTile1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a421907db1044f478eff670bf0a9660
+      internalID: -2072172528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9504f83d4b4e9649b45f0abccc54552
+      internalID: 1089707698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21449182c76423941a7d4f71050e26a3
+      internalID: -538852381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffaf38970f75924b9d91e67b02c5e5c
+      internalID: -2051067912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc886a336cecfa408748f12a1c563b6
+      internalID: -71980324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfca72337768da34cbbaf20bce522de3
+      internalID: -996071413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolTable
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b05ea774a8132244bc134cd32ccb8b1
+      internalID: 1869443336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc2e5e603b8d32448961e5349a1bdf7
+      internalID: -2104628024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98b80aafb16a0a4598aed9b624ddbfa
+      internalID: -1089002602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71008df81fed0784c861ff9447a647de
+      internalID: -1035070734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fa230e43d90db48a83a61c8b9fe4c3
+      internalID: -776162446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4fe9aeefe19e24a971b512026b1529
+      internalID: -1098404450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTile12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5984d34a478594a852e91d5d023201
+      internalID: 1378179057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4435944bb0c554fb2ffae2c5764326
+      internalID: 1969873443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32217e35508981f4781eca57c2aedcdb
+      internalID: 519914389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af912717a8ecc7449f0b3403190b83c
+      internalID: -1623763187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb5b8fc1e3751f40ba6b6294765aa7c
+      internalID: 507336192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d34958379209ee4480f5d7dd2fab47e
+      internalID: 767496148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LongWall6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 20
+        width: 8
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ce3981f4fff5f4c91dddc17c098d9f
+      internalID: 109339256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIGtable
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 68
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01c5c679563ab44ba9bcc7050425960
+      internalID: 178246944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairStanding
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6ab42f26c02cf4baf454995b392d73
+      internalID: 278143322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChairFallen
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 44
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fa4afedaf4e834180ad02f8b379759
+      internalID: -859375878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixil-frame-0 (1)_34: 1240479279
+      WallTile11: -1098404450
+      pixil-frame-0 (1)_53: -527955901
+      pixil-frame-0 (1)_38: 955385638
+      pixil-frame-0 (1)_51: 1787547919
+      pixil-frame-0 (1)_88: 1026105080
+      pixil-frame-0 (1)_82: 1023451246
+      pixil-frame-0 (1)_91: 2030572156
+      pixil-frame-0 (1)_94: -383731863
+      pixil-frame-0 (1)_33: 351074696
+      pixil-frame-0 (1)_28: 1297384058
+      pixil-frame-0 (1)_48: -955630788
+      pixil-frame-0 (1)_57: 1439859870
+      pixil-frame-0 (1)_96: -1364275174
+      WallTile1: -2072172528
+      LongWall5: 767496148
+      ChairFallen: -859375878
+      pixil-frame-0 (1)_71: -1013245330
+      pixil-frame-0 (1)_16: -514461365
+      pixil-frame-0 (1)_14: 1788819313
+      pixil-frame-0 (1)_74: 639430393
+      pixil-frame-0 (1)_85: -1215983490
+      pixil-frame-0 (1)_90: -482008338
+      WallTile8: -1089002602
+      pixil-frame-0 (1)_50: -1800845790
+      ChairStanding: 278143322
+      LongWall4: 507336192
+      pixil-frame-0 (1)_78: 10651943
+      pixil-frame-0 (1)_45: 886415205
+      pixil-frame-0 (1)_81: -753603976
+      pixil-frame-0 (1)_59: -1738153527
+      pixil-frame-0 (1)_75: -1497688566
+      pixil-frame-0 (1)_87: -1838718660
+      pixil-frame-0 (1)_76: 1503894500
+      SmolTable: 1869443336
+      pixil-frame-0 (1)_68: 521377756
+      pixil-frame-0 (1)_63: 1363928221
+      pixil-frame-0 (1)_65: -71494592
+      pixil-frame-0 (1)_89: 898595814
+      pixil-frame-0 (1)_29: -1350898891
+      WallTile2: 1089707698
+      pixil-frame-0 (1)_52: -30660591
+      pixil-frame-0 (1)_39: 1511688760
+      pixil-frame-0 (1)_83: -984105576
+      pixil-frame-0 (1)_37: -708279296
+      pixil-frame-0 (1)_41: -618695845
+      pixil-frame-0 (1)_69: 460263553
+      LongWall6: 109339256
+      pixil-frame-0 (1)_66: -1352997071
+      pixil-frame-0 (1)_30: 1553564399
+      pixil-frame-0 (1)_36: -1470829709
+      BIGtable: 178246944
+      pixil-frame-0 (1)_97: 640469835
+      pixil-frame-0 (1)_73: 240894937
+      pixil-frame-0 (1)_32: 393532828
+      pixil-frame-0 (1)_7: -1439183795
+      pixil-frame-0 (1)_35: -439193601
+      pixil-frame-0 (1)_25: -552294408
+      pixil-frame-0 (1)_64: 1874269953
+      pixil-frame-0 (1)_67: 1664961137
+      WallTile6: -996071413
+      LongWall3: -1623763187
+      pixil-frame-0 (1)_17: 1408390726
+      pixil-frame-0 (1)_27: -473997411
+      pixil-frame-0 (1)_70: 1556980510
+      LongWall1: 1969873443
+      pixil-frame-0 (1)_43: -1326968105
+      pixil-frame-0 (1)_93: -381968064
+      WallTile9: -1035070734
+      pixil-frame-0 (1)_15: 848908089
+      pixil-frame-0 (1)_44: -2007259686
+      pixil-frame-0 (1)_31: -1434708486
+      pixil-frame-0 (1)_40: 466660681
+      pixil-frame-0 (1)_47: 1785251181
+      pixil-frame-0 (1)_26: 543925836
+      pixil-frame-0 (1)_77: 943472063
+      pixil-frame-0 (1)_84: 1169992881
+      pixil-frame-0 (1)_79: 1931239876
+      WallTile3: -538852381
+      WallTile12: 1378179057
+      WallTile7: -2104628024
+      pixil-frame-0 (1)_49: -2097756253
+      pixil-frame-0 (1)_55: 1417935759
+      pixil-frame-0 (1)_86: -624398979
+      pixil-frame-0 (1)_80: -594599758
+      pixil-frame-0 (1)_46: 917129427
+      pixil-frame-0 (1)_61: 490627234
+      WallTile4: -2051067912
+      pixil-frame-0 (1)_95: 580089308
+      pixil-frame-0 (1)_92: -89247714
+      pixil-frame-0 (1)_72: 1663612794
+      pixil-frame-0 (1)_54: -1975835615
+      pixil-frame-0 (1)_56: 1254778503
+      WallTile5: -71980324
+      pixil-frame-0 (1)_42: -1194507392
+      LongWall2: 519914389
+      WallTile10: -776162446
+      pixil-frame-0 (1)_62: 330231933
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
