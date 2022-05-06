@@ -26,7 +26,7 @@ text-decoration: none;}
 .vertical-menu a.active {background-color:cornflowerblue;
 color:white;}
 body {
-font-family: "Sans", "Sans";
+font-family: "Arial", "Arial";
 }
 
 .sidenav {
@@ -83,6 +83,8 @@ margin-left: 50px;
 
 <link rel="stylesheet" href="websiteassets/style.css">
 
+
+
 </head>
 
    
@@ -90,7 +92,6 @@ margin-left: 50px;
 <body bgcolor="#04011b">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0) class="closebtn onclick="closeNav()">&times;</a>
-    <a href="index.html" target="_blank"> Hjem</a>
     <a href="websiteassets/eldin.html" target="_blank"> Eldin</a>
     <a href="websiteassets/geir.html" target="_blank">Geir</a>
     <a href="websiteassets/jonas.html" target="_blank">Jonas</a>
@@ -151,10 +152,112 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
   
   
+<table id="defaultText">
+  <tr>
+    <td><label>Her under kan du se screenshotts fra spillet
+    </br></br></br>
 
+        </label>
+  </tr>
+</table>
   
-  
-  <div id="test"></div>
+<div class="container">
+
+  <!--legger til bildene i galleriet-->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri1.jpg" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri2.png" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri3.jpg" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri4.jpg" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri5.png" style="width:25%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="websiteassets/Pictures/galleri/galleri6.png" style="width:25%">
+  </div>
+
+  <!-- Piler for å gå frem å tilbake mellom bildene -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Tekst som sier noe om bildene -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri1.jpg" style="width:100%" onclick="currentSlide(1)" alt="gallery1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri2.png" style="width:100%" onclick="currentSlide(2)" alt="gallery2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri3.jpg" style="width:100%" onclick="currentSlide(3)" alt="gallery3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri4.jpg" style="width:100%" onclick="currentSlide(4)" alt="gallery4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri5.png" style="width:100%" onclick="currentSlide(5)" alt="gallry5">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri6.png" style="width:100%" onclick="currentSlide(6)" alt="gallery6">
+    </div>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// gjør at frem og tilbake knappene fungerer
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Gjør at du kan se hovedbildet du er på
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+</script>
   
 
 

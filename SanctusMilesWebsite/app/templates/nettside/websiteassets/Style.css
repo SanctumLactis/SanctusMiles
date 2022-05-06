@@ -1,6 +1,6 @@
 #defaultText {
     color:#ffa500;
-    font-size:2vw;
+    font-size:1vw;
     position:relative; left:5px; top:50px; width:50%;
     margin-left: auto;
     margin-right: auto;
@@ -12,6 +12,99 @@
 }
 
 #sidenav {
-    font-size:3vw;cursor:pointer;
+    font-size:2vw;cursor:pointer;
     color:#ffa500;
 }
+
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      /* Posisjonen til galleriet */
+      .container {
+        position: relative;
+      }
+      
+      /* gjør at alle bildene er gjemt */
+      .mySlides {
+        display: none;
+        text-align: center;
+      }
+      
+      /* endrer musepeker når du går over et bilde */
+      .cursor {
+        cursor: pointer;
+      }
+      
+      /* Fixer knappene for å gå frem og tilbake i galleriet */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      
+      /* Gjør at fremover knappen i gallereiet er til høyre */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      /* teksten til nummerne til bildene */
+      .numbertext {
+        color: #cf7500;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* Boxen der teksten til hvert bilde befinner seg */
+      .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+      }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Gjør at du ser alle bildene under ved siden av hverandre */
+      .column {
+        float: left;
+        width: 16.66%;
+      }
+      
+      /* gjør bildene under litt gjennomsiktige */
+      .demo {
+        opacity: 0.6;
+      }
+      
+      .active,
+      .demo:hover {
+        opacity: 1;
+
+
+        /* https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+      }
+
+      
