@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZomberWanderState : StateDIA
+public class ZISSWander : SubStateDIA
 {
     // Variables
     [SerializeField] float wanderRange = 3.5f;
@@ -15,10 +15,10 @@ public class ZomberWanderState : StateDIA
     float distanceToPosition;
 
     // Coroutines
-    Coroutine waitThenIdle;
+    Coroutine waitThenStandStill;
 
     // Runs on initialization
-    public ZomberWanderState(object mainScript) : base(mainScript)
+    public ZISSWander(object mainScript, object parentState) : base(mainScript, parentState)
     {
         wanderRange = main.wanderRange;
         switchIdleDistance = main.switchIdleDistance;
@@ -28,10 +28,10 @@ public class ZomberWanderState : StateDIA
     }
 
     // Runs once before the first OnUpdate() when state is activated
-    public override void OnEnter(dynamic[] args)
+    public override void OnEnter()
     {
         // Start Coroutine that turns to idle after maxWanderTime to make sure the Zomber isn't stuck
-        waitThenIdle = MonoHelper.instance.StartCoroutine(WaitThenIdle());
+        waitThenStandStill = MonoHelper.instance.StartCoroutine(WaitThenStandStill());
 
         // Get a random position within the wander area
         wanderPosition = new Vector3(wanderArea.x + UnityEngine.Random.Range(-wanderRange, wanderRange), wanderArea.y + UnityEngine.Random.Range(-wanderRange, wanderRange), 0);
@@ -40,16 +40,12 @@ public class ZomberWanderState : StateDIA
     // Runs every frame the state is active
     public override void OnUpdate()
     {
-        //TODO: Add check for if the Zomber can see the player
-
-
         // Check how close we are to the wander position
         distanceToPosition = Vector3.Distance(main.transform.position, wanderPosition);
 
-        UnityEngine.Debug.Log(distanceToPosition.ToString() + " " + wanderPosition.ToString());
         if (distanceToPosition < switchIdleDistance)
         {
-            main.stateMachine.SwitchState(main.idleState);
+            main.stateMachine.SwitchState(parentState.standingStillSS);
         }
     }
 
@@ -63,13 +59,13 @@ public class ZomberWanderState : StateDIA
     // Runs when the state stops
     public override void OnExit()
     {
-        MonoHelper.instance.StopCoroutine(waitThenIdle);
+        MonoHelper.instance.StopCoroutine(waitThenStandStill);
     }
 
     // Waits then switches to the wander state
-    IEnumerator WaitThenIdle()
+    IEnumerator WaitThenStandStill()
     {
         yield return new WaitForSeconds(maxWanderTime);
-        main.stateMachine.SwitchState(main.wanderState);
+        main.stateMachine.SwitchState(parentState.standingStillSS);
     }
 }

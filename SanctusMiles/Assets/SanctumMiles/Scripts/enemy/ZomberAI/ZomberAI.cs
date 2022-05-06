@@ -12,8 +12,7 @@ public class ZomberAI : MonoBehaviour
 
     // States
     [SerializeField] public ZomberIdleState idleState;
-    [SerializeField] public ZomberWanderState wanderState;
-    [SerializeField] public ZomberAttackState attackState;
+    [SerializeField] public ZomberCombatState combatState;
 
     [Header("Idle State")]
     // IdleState
@@ -44,10 +43,9 @@ public class ZomberAI : MonoBehaviour
 
         // Initialize States
         idleState = new ZomberIdleState(this);
-        wanderState = new ZomberWanderState(this);
-        attackState = new ZomberAttackState(this);
+        combatState = new ZomberCombatState(this);
 
         // Change to starting state
-        stateMachine.SwitchState(wanderState);
+        stateMachine.SwitchState(idleState);
     }
 }

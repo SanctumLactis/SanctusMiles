@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZomberAttackState : StateDIA
+public class ZCSSAttackTarget : SubStateDIA
 {
     // Runs on initialization
-    public ZomberAttackState(object mainScript) : base(mainScript)
+    public ZCSSAttackTarget(object mainScript, object parentState) : base(mainScript, parentState)
     {
 
     }
 
     // Runs once before the first OnUpdate() when state is activated
-    public override void OnEnter(dynamic[] args)
+    public override void OnEnter()
     {
 
     }
