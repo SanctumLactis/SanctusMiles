@@ -2548,7 +2548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 171.002}
+  m_AnchoredPosition: {x: -0.000036532, y: 225}
   m_SizeDelta: {x: 1232.099, y: 308.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1278521104
@@ -2591,7 +2591,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sanctus Miles
+  m_text: '<line-indent=-5%><align="left"><size=100>The adventures of
+
+    <line-indent=5%><align="center"><size=200>Pixel
+    Knight'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c715b60ced98fe24e9973c330eb05dc9, type: 2}
   m_sharedMaterial: {fileID: -5869563592928501569, guid: c715b60ced98fe24e9973c330eb05dc9, type: 2}
@@ -2625,7 +2628,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
