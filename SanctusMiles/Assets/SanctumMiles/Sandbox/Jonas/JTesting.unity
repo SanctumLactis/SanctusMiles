@@ -255,7 +255,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780374, y: 1}
+    m_SensorSize: {x: 1.777512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -702,6 +702,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &423305729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423305730}
+  m_Layer: 0
+  m_Name: Players
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423305730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423305729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.349139, y: 26.129217, z: 5.825508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1843679490}
+  - {fileID: 1526492576}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &425283401
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +793,7 @@ Transform:
   - {fileID: 1263127344}
   - {fileID: 796928199}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493253788
 GameObject:
@@ -3805,7 +3838,7 @@ GameObject:
   - component: {fileID: 1526492577}
   m_Layer: 0
   m_Name: Player (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3846,6 +3879,10 @@ MonoBehaviour:
   moveSpeed: 250
   turnSpeed: 300
   rigidBody: {fileID: 1526492573}
+  anim: {fileID: 0}
+  playerCollider: {fileID: 0}
+  doorTrigger: {fileID: 0}
+  level1: Level uno
 --- !u!114 &1526492575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4012,13 +4049,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526492572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: 0, z: 0}
+  m_LocalPosition: {x: -13.94914, y: -26.129217, z: -5.825508}
   m_LocalScale: {x: 7.51, y: 7.51, z: 7.51}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1443218302}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 423305730}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1526492577
 MonoBehaviour:
@@ -4214,7 +4251,7 @@ GameObject:
   - component: {fileID: 1843679491}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4234,6 +4271,10 @@ MonoBehaviour:
   moveSpeed: 250
   turnSpeed: 300
   rigidBody: {fileID: 1843679491}
+  anim: {fileID: 0}
+  playerCollider: {fileID: 0}
+  doorTrigger: {fileID: 0}
+  level1: Level uno
 --- !u!114 &1843679489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4400,13 +4441,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843679487}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15.349139, y: -26.129217, z: -5.825508}
   m_LocalScale: {x: 7.51, y: 7.51, z: 7.51}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 835814226}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 423305730}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1843679491
 Rigidbody2D:
@@ -4699,7 +4740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944009507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22272728, y: 0, z: 0}
+  m_LocalPosition: {x: 0.22272718, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
