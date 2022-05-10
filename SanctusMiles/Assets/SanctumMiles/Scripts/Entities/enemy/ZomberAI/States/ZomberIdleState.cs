@@ -28,7 +28,14 @@ public class ZomberIdleState : StateDIA
     // Runs every frame the state is active
     public override void OnUpdate()
     {
-        //TODO: Add check for if the Zomber can see the player
+        foreach (KeyValuePair<GameObject, Collider> collision in main.GetCollisions())
+        {
+            if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")
+            {
+                Debug.Log("Detected Player - " + collision.Value.gameObject.name);
+                main.stateMachine.SwitchState(main.combatState);
+            }
+        }
     }
 
     // Runs at a fixed rate and is framerate independent
