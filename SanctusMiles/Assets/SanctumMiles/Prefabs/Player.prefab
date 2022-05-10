@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 3281677407925543114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3281677409336062617}
   m_RootOrder: 0
@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 3281677409336062820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.51, y: 7.51, z: 7.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3281677407925543113}
@@ -342,8 +342,8 @@ MonoBehaviour:
   turnSpeed: 300
   rigidBody: {fileID: 3281677409336062616}
   anim: {fileID: 3281677407925543118}
-  playerCollider: {fileID: 0}
-  doorTrigger: {fileID: 0}
+  playerCollider: {fileID: 3281677407925543119}
+  doorTrigger: {fileID: 7356296856426700344, guid: 76a5306d3f97e6042a6b3edb7b2d80e2, type: 3}
   level1: Level uno
 --- !u!50 &3281677409336062616
 Rigidbody2D:
