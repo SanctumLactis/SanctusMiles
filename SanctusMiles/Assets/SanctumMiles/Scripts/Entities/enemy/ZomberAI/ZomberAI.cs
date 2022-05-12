@@ -71,12 +71,16 @@ public class ZomberAI : MonoBehaviour
     public void OnCollideEnter(GameObject colliderObject, Collider other)
     {
         KeyValuePair<GameObject, Collider> collision = new KeyValuePair<GameObject, Collider>(colliderObject, other);
+        Debug.Log(collision);
+
         if (!collisions.Contains(collision)) { collisions.Add(collision); }
     }
 
     public void OnCollideExit(GameObject colliderObject, Collider other)
     {
         KeyValuePair<GameObject, Collider> collision = new KeyValuePair<GameObject, Collider>(colliderObject, other);
+        Debug.Log(collision);
+
         if (collisions.Contains(collision)) { collisions.Remove(collision); }
     }
 }

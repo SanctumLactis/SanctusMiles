@@ -13,12 +13,14 @@ public class ColliderUpdater : MonoBehaviour
     public CollideExit collideExit;
  
  
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         collideEnter(gameObject, other);
     }
      
-    private void OnTriggerExit(Collider other) {
+    void OnTriggerExit(Collider other) {
+        Debug.Log(other);
         collideExit(gameObject, other);
     }
 }

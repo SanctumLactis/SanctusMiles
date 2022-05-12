@@ -30,6 +30,7 @@ public class ZomberIdleState : StateDIA
     {
         foreach (KeyValuePair<GameObject, Collider> collision in main.GetCollisions())
         {
+            Debug.Log(collision.Key.name + " " + collision.Value.gameObject.tag);
             if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")
             {
                 Debug.Log("Detected Player - " + collision.Value.gameObject.name);
