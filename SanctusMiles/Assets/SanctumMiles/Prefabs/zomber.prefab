@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 8588454975597657524}
   - component: {fileID: -1511312782069050383}
   - component: {fileID: 7339683986521382709}
+  - component: {fileID: -1599810746059181365}
   m_Layer: 7
   m_Name: Zomber
   m_TagString: ENEMY
@@ -332,4 +333,20 @@ MonoBehaviour:
   maxWanderTime: 5
   attackDistance: 1
   chaseSpeed: 600
-  attackEndlag: 1
+  damage: 10
+  attackEndlag: 0.5
+--- !u!114 &-1599810746059181365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588454975597657513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20da78ec511d81241a4ab55a4fc75bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 100
+  regenAmount: 1
+  regenSpeed: 0.75

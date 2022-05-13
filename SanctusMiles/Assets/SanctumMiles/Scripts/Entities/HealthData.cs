@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HealthData : MonoBehaviour
 {
-
     [SerializeField] private float playerHP = 100f;
-    [SerializeField] private float regenRate = 1f;
+    [SerializeField] private float regenAmount = 1f;
     [SerializeField] public float regenSpeed = 0.5f;
 
 
@@ -22,6 +21,12 @@ public class HealthData : MonoBehaviour
     {
         if (playerHP > 100f)
             playerHP = 100f;
+        
+        if (playerHP <= 0)
+        {
+            playerHP = 0f;
+            gameObject.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -33,16 +38,14 @@ public class HealthData : MonoBehaviour
         while (playerHP > 0)
         {
             if (playerHP < 100f)
-                playerHP += regenRate;
+                playerHP += regenAmount;
             
             yield return new WaitForSeconds(regenSpeed);
         }
     }
 
-    void DoDamage(float damage)
+    public void DoDamage(float damage)
     {
         playerHP -= damage;
-
-
     }
 }

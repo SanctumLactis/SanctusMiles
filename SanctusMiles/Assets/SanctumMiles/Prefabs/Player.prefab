@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 5415196718661120276}
   - component: {fileID: 3281677409336062618}
   - component: {fileID: 3281677409336062619}
+  - component: {fileID: -1085547711571009182}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -407,3 +408,18 @@ MonoBehaviour:
   levels:
   - TutorialLevel
   - Level uno
+--- !u!114 &-1085547711571009182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3281677409336062820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20da78ec511d81241a4ab55a4fc75bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 100
+  regenAmount: 1
+  regenSpeed: 0.5

@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class ZCSSAttackTarget : SubStateDIA
 {
+    float damage = 10f;
     float attackEndlag = 1f;
 
     // Runs on initialization
     public ZCSSAttackTarget(object mainScript, object parentState) : base(mainScript, parentState)
     {
+        damage = main.damage;
         attackEndlag = main.attackEndlag;
     }
 
@@ -44,7 +46,7 @@ public class ZCSSAttackTarget : SubStateDIA
         GameObject closestPlayer = parentState.GetClosestVisiblePlayer();
         Debug.Log("Attacking Player: " + closestPlayer.name);
 
-        // Remove Health from closestPlayer and play animation
+        closestPlayer.GetComponent<HealthData>().DoDamage(damage);
 
         yield return new WaitForSeconds(attackEndlag);
 

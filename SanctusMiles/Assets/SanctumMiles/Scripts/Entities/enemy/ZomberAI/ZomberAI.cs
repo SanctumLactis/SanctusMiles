@@ -49,6 +49,7 @@ public class ZomberAI : MonoBehaviour
 
     [Header("ZCSS Attack Target")]
     // ZCSS Attack Target
+    [SerializeField] public float damage = 10f;
     [SerializeField] public float attackEndlag = 1f;
 
     public ZomberAI()
