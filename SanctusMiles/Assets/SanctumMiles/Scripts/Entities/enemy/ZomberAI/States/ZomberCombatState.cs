@@ -33,7 +33,7 @@ public class ZomberCombatState : StateDIA
         bool playerDetected = false;
 
         // Check for all Players visible
-        foreach (KeyValuePair<GameObject, Collider> collision in main.GetCollisions())
+        foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
             Debug.Log(collision.Key.name + " " + collision.Value.gameObject.tag);
             if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")

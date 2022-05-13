@@ -28,7 +28,7 @@ public class ZomberIdleState : StateDIA
     // Runs every frame the state is active
     public override void OnUpdate()
     {
-        foreach (KeyValuePair<GameObject, Collider> collision in main.GetCollisions())
+        foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
             Debug.Log(collision.Key.name + " " + collision.Value.gameObject.tag);
             if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")

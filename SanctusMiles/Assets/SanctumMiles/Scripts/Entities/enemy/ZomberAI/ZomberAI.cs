@@ -18,8 +18,8 @@ public class ZomberAI : MonoBehaviour
     [Header("Colliders")]
     // Colliders
     public List<ColliderUpdater> colliderUpdaters;
-    private List<KeyValuePair<GameObject, Collider>> collisions = new List<KeyValuePair<GameObject, Collider>>();
-    public List<KeyValuePair<GameObject, Collider>> GetCollisions() { return collisions; }
+    private List<KeyValuePair<GameObject, Collider2D>> collisions = new List<KeyValuePair<GameObject, Collider2D>>();
+    public List<KeyValuePair<GameObject, Collider2D>> GetCollisions() { return collisions; }
 
     [Header("Idle State")]
     [Tooltip("How far the Zomber can see, remember to change the collider too for proper representation")]
@@ -68,17 +68,17 @@ public class ZomberAI : MonoBehaviour
         stateMachine.SwitchState(idleState);
     }
 
-    public void OnCollideEnter(GameObject colliderObject, Collider other)
+    public void OnCollideEnter(GameObject colliderObject, Collider2D other)
     {
-        KeyValuePair<GameObject, Collider> collision = new KeyValuePair<GameObject, Collider>(colliderObject, other);
+        KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
         Debug.Log(collision);
 
         if (!collisions.Contains(collision)) { collisions.Add(collision); }
     }
 
-    public void OnCollideExit(GameObject colliderObject, Collider other)
+    public void OnCollideExit(GameObject colliderObject, Collider2D other)
     {
-        KeyValuePair<GameObject, Collider> collision = new KeyValuePair<GameObject, Collider>(colliderObject, other);
+        KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
         Debug.Log(collision);
 
         if (collisions.Contains(collision)) { collisions.Remove(collision); }

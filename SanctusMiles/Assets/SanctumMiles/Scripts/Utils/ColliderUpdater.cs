@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ColliderUpdater : MonoBehaviour
 {
-    public delegate void CollideEnter(GameObject collider, Collider collideEnter);
+    public delegate void CollideEnter(GameObject collider, Collider2D collideEnter);
  
     public CollideEnter collideEnter;
 
-    public delegate void CollideExit(GameObject collider, Collider collideExit);
+    public delegate void CollideExit(GameObject collider, Collider2D collideExit);
  
     public CollideExit collideExit;
  
  
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other);
         collideEnter(gameObject, other);
     }
      
-    void OnTriggerExit(Collider other) {
+    void OnTriggerExit2D(Collider2D other) {
         Debug.Log(other);
         collideExit(gameObject, other);
     }
