@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 50;
-    [SerializeField] float turnSpeed = 50;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float turnSpeed = 5f;
 
     [SerializeField] Rigidbody2D rigidBody;
 
@@ -35,11 +35,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(Vector3.forward * -turn * turnSpeed * Time.deltaTime);
-        rigidBody.velocity = transform.right * move * moveSpeed * Time.deltaTime;
+        rigidBody.AddTorque(turnSpeed * -turn * Time.deltaTime);
 
-
-
+        rigidBody.AddForce(transform.right * moveSpeed * move * Time.deltaTime, ForceMode2D.Force);
     }
 
     public void OnMove(InputAction.CallbackContext context)

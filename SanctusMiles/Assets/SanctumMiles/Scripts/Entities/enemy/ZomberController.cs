@@ -14,10 +14,10 @@ public class ZomberController : MonoBehaviour
     }
 
     // Move Zomber towards position
-    public void MoveTowardsPosition(Vector3 position)
+    public void MoveTowardsPosition(Vector3 position, float speed=5)
     {
         Look(position);
-        MoveForward();
+        MoveForward(speed);
     }
 
     // Look Zomber
@@ -31,7 +31,7 @@ public class ZomberController : MonoBehaviour
     }
 
     // Move Forward Zomber
-    public void MoveForward()
+    public void MoveForward(float speed=5)
     {
         rigidBody.AddForce(transform.right * moveSpeed, ForceMode2D.Force);
     }

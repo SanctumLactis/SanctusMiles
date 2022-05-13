@@ -15,12 +15,10 @@ public class ColliderUpdater : MonoBehaviour
  
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
         collideEnter(gameObject, other);
     }
      
     void OnTriggerExit2D(Collider2D other) {
-        Debug.Log(other);
         collideExit(gameObject, other);
     }
 }
