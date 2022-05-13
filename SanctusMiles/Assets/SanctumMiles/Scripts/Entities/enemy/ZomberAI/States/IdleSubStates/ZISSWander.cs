@@ -6,6 +6,7 @@ using UnityEngine;
 public class ZISSWander : SubStateDIA
 {
     // Variables
+    [SerializeField] float wanderSpeed = 1000f;
     [SerializeField] float wanderRange = 3.5f;
     [SerializeField] float switchIdleDistance = 0.25f;
     [SerializeField] float maxWanderTime = 5f;
@@ -20,6 +21,7 @@ public class ZISSWander : SubStateDIA
     // Runs on initialization
     public ZISSWander(object mainScript, object parentState) : base(mainScript, parentState)
     {
+        wanderSpeed = main.wanderSpeed;
         wanderRange = main.wanderRange;
         switchIdleDistance = main.switchIdleDistance;
         maxWanderTime = main.maxWanderTime;
@@ -53,7 +55,7 @@ public class ZISSWander : SubStateDIA
     public override void OnFixedUpdate()
     {
         // Move
-        main.controller.MoveTowardsPosition(wanderPosition);
+        main.controller.MoveTowardsPosition(wanderPosition, wanderSpeed);
     }
 
     // Runs when the state stops

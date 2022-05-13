@@ -32,15 +32,20 @@ public class ZomberAI : MonoBehaviour
 
     [Header("ZISS Wander")]
     // ZISS Wander
+    [SerializeField] public float wanderSpeed = 1000f;
     [SerializeField] public float wanderRange = 3.5f;
     [Tooltip("How close the Zomber has to reach the target position before it enters Idle State again.")]
     [SerializeField] public float switchIdleDistance = 0.25f;
     [SerializeField] public float maxWanderTime = 5f;
 
     [Header("Combat State")]
-    // AttackState
+    // Combat State
     [Tooltip("How far the Zomber can attack, remember to change the collider too for proper representation")]
     [SerializeField] public float attackDistance = 1f;
+
+    [Header("ZCSS Attack Target")]
+    // ZCSS Attack Target
+    [SerializeField] public float attackEndlag = 1f;
 
     public ZomberAI()
     {
@@ -71,16 +76,12 @@ public class ZomberAI : MonoBehaviour
     public void OnCollideEnter(GameObject colliderObject, Collider2D other)
     {
         KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
-        Debug.Log(collision);
-
         if (!collisions.Contains(collision)) { collisions.Add(collision); }
     }
 
     public void OnCollideExit(GameObject colliderObject, Collider2D other)
     {
         KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
-        Debug.Log(collision);
-
         if (collisions.Contains(collision)) { collisions.Remove(collision); }
     }
 }

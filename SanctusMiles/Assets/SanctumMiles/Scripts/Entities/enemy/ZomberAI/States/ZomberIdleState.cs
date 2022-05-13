@@ -13,15 +13,13 @@ public class ZomberIdleState : StateDIA
     // Runs on initialization
     public ZomberIdleState(object mainScript) : base(mainScript)
     {
-
+        standingStillSS = new ZISSStandingStill(main, this);
+        wanderSS = new ZISSWander(main, this);
     }
 
     // Runs once before the first OnUpdate() when state is activated
     public override void OnEnter(dynamic[] args)
     {
-        standingStillSS = new ZISSStandingStill(main, this);
-        wanderSS = new ZISSWander(main, this);
-
         main.stateMachine.SwitchState(wanderSS);
     }
 
@@ -30,10 +28,9 @@ public class ZomberIdleState : StateDIA
     {
         foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
-            Debug.Log(collision.Key.name + " " + collision.Value.gameObject.tag);
             if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")
             {
-                Debug.Log("Detected Player - Self: " + collision.Key.name + "Other: " + collision.Value.gameObject.name);
+                Debug.Log("Detected Player - Self: " + main.gameObject.name + " | Collider: " + collision.Key.name + " | Other: " + collision.Value.gameObject.name);
                 main.stateMachine.SwitchState(main.combatState);
             }
         }
