@@ -32,7 +32,7 @@ public class ZomberAI : MonoBehaviour
 
     [Header("ZISS Wander")]
     // ZISS Wander
-    [SerializeField] public float wanderSpeed = 1000f;
+    [SerializeField] public float wanderSpeed = 600;
     [SerializeField] public float wanderRange = 3.5f;
     [Tooltip("How close the Zomber has to reach the target position before it enters Idle State again.")]
     [SerializeField] public float switchIdleDistance = 0.25f;
@@ -42,6 +42,10 @@ public class ZomberAI : MonoBehaviour
     // Combat State
     [Tooltip("How far the Zomber can attack, remember to change the collider too for proper representation")]
     [SerializeField] public float attackDistance = 1f;
+
+    [Header("ZCSS Move To Target")]
+    // ZCSS Attack Target
+    [SerializeField] public float chaseSpeed = 900f;
 
     [Header("ZCSS Attack Target")]
     // ZCSS Attack Target

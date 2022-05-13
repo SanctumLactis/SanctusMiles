@@ -6,7 +6,7 @@ using UnityEngine;
 public class ZISSWander : SubStateDIA
 {
     // Variables
-    [SerializeField] float wanderSpeed = 1000f;
+    [SerializeField] float wanderSpeed = 600;
     [SerializeField] float wanderRange = 3.5f;
     [SerializeField] float switchIdleDistance = 0.25f;
     [SerializeField] float maxWanderTime = 5f;

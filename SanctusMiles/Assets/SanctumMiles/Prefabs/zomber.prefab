@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce32502be1495c248b0cd5cb9e2800b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
   rigidBody: {fileID: 8588454975597657525}
 --- !u!114 &7339683986521382709
 MonoBehaviour:
@@ -327,7 +326,10 @@ MonoBehaviour:
   viewDistance: 4.5
   switchWanderTimeMin: 2
   switchWanderTimeMax: 5
+  wanderSpeed: 300
   wanderRange: 3.5
   switchIdleDistance: 0.25
   maxWanderTime: 5
   attackDistance: 1
+  chaseSpeed: 600
+  attackEndlag: 1

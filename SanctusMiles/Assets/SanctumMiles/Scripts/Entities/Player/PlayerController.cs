@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float turnSpeed = 5f;
+    [SerializeField] float moveSpeed = 1000f;
+    [SerializeField] float turnSpeed = 400f;
 
     [SerializeField] Rigidbody2D rigidBody;
 
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Collider2D playerCollider;
     public Collider2D doorTrigger;
-    public string level1 = "Level uno";
+    public List<string> levels = new List<string>();
 
 
     // Start is called before the first frame update
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         turn = context.ReadValue<float>();
 
         
-        //Debug.Log("Turn: " + turn);
+        // Debug.Log("Turn: " + turn);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
             case InputActionPhase.Started:
                 if (playerCollider.IsTouching(doorTrigger))
                 {
-                    SceneManager.LoadScene(level1);
+                    SceneManager.LoadScene(levels[1]);
                 }
                 break;
             case InputActionPhase.Performed:

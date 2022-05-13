@@ -155,13 +155,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &5415196718661120276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,6 +341,46 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1e38efc8-98c4-4b19-b56e-c6836d6db2f6
     m_ActionName: Player 2/Special[/Keyboard/rightShift,/Keyboard/numpadPeriod]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1650ccb0-ae20-4dbe-accd-4add93eb526a
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bfa108f1-74bb-4107-b490-b8cedbfa71b0
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 153e6bbb-fbb5-4fdf-bbf0-db508398775c
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3a817b8-974d-4ada-b963-19a6b7ab343f
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d95e540-9104-4ace-8d0a-04820133a5f3
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7e063409-19c3-466e-a57a-9fbf2d9eb3a3
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5e869661-3d9a-449f-98d2-e113429a1746
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e3125158-fee2-46be-b05e-dad826adc17e
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed90be01-9da5-4b85-94b9-d126bf5a1b4e
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 339920ab-ebf1-40a0-b3d3-2aa4d52c2c81
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player 1
@@ -358,10 +398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7b8dafe6ecf3740bdfc18fe417a6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  turnSpeed: 5
+  moveSpeed: 1000
+  turnSpeed: 400
   rigidBody: {fileID: 3281677409336062616}
   anim: {fileID: 3281677407925543118}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 5415196718661120276}
   doorTrigger: {fileID: 7356296856426700344, guid: 76a5306d3f97e6042a6b3edb7b2d80e2, type: 3}
-  level1: Level uno
+  levels:
+  - TutorialLevel
+  - Level uno

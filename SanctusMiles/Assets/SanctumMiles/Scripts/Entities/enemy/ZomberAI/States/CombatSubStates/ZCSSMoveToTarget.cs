@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class ZCSSMoveToTarget : SubStateDIA
 {
+    float chaseSpeed = 900f;
+
     // Runs on initialization
     public ZCSSMoveToTarget(object mainScript, object parentState) : base(mainScript, parentState)
     {
-
+        chaseSpeed = main.chaseSpeed;
     }
 
     // Runs once before the first OnUpdate() when state is activated
@@ -23,7 +25,7 @@ public class ZCSSMoveToTarget : SubStateDIA
     {
         CheckAttackPossible();
 
-        main.controller.MoveTowardsPosition(parentState.GetClosestVisiblePlayer());
+        main.controller.MoveTowardsPosition(parentState.GetClosestVisiblePlayer(), chaseSpeed);
     }
 
     // Runs at a fixed rate and is framerate independent
