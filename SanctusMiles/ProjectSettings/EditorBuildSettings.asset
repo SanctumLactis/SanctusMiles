@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/SanctumMiles/Scenes/MainMenu.unity
     guid: e0956696a8743db419701b6d954f3936
   - enabled: 1
-    path: Assets/SanctumMiles/Scenes/TutorialLevel.unity
+    path: Assets/SanctumMiles/Scenes/Levels/TutorialLevel.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/SanctumMiles/Scenes/Level uno.unity
+    path: Assets/SanctumMiles/Scenes/Levels/Level 1.unity
     guid: 6483c56914fe0914699108753a854547
   m_configObjects: {}
