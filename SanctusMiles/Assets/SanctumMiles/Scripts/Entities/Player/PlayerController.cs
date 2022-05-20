@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     public Collider2D doorTrigger;
     public List<string> levels = new List<string>();
 
+    public float AttackCooldown = 0.5f;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
 
         playerInput = transform.GetComponent<PlayerInput>();
 
+        timer = AttackCooldown;
         
         // Set input method
         if (player1 == this)
@@ -64,7 +67,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        timer -= Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -93,9 +96,11 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                anim.CrossFadeInFixedTime("swing left anim", 0);
-
-
+                if(timer<0)
+                {
+                    anim.CrossFadeInFixedTime("swing left anim", 0);
+                    timer = AttackCooldown;
+                }
                 break;
             case InputActionPhase.Performed:
                 // Action Performed
@@ -123,5 +128,12 @@ public class PlayerController : MonoBehaviour
                 // Button Released
                 break;
         }
+    }
+
+    IEnumerator swinganimation()
+    {
+
+        
+        yield return new WaitForSeconds(1);
     }
 }

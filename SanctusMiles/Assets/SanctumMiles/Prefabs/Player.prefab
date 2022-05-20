@@ -93,7 +93,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3281677407925543114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b92dbb363f74b364a84da4e53745ce93, type: 2}
   m_CullingMode: 0
@@ -401,13 +401,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1000
   turnSpeed: 400
-  rigidBody: {fileID: 3281677409336062616}
   anim: {fileID: 3281677407925543118}
   playerCollider: {fileID: 5415196718661120276}
   doorTrigger: {fileID: 7356296856426700344, guid: 76a5306d3f97e6042a6b3edb7b2d80e2, type: 3}
   levels:
   - TutorialLevel
   - Level uno
+  AttackCooldown: 0.5
 --- !u!114 &-1085547711571009182
 MonoBehaviour:
   m_ObjectHideFlags: 0
