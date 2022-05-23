@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ENEMY
-  - DOOR
-  - sword
+  - Player Hurtbox
+  - Player Hitbox
+  - Enemy Hurtbox
+  - Enemy Hitbox
+  - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - CAM
-  - ENEMY
-  - PLAYER
+  - Camera
+  - Enemy
+  - Player
   - 
   - 
   - 

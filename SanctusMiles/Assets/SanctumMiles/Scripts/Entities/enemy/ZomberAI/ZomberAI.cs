@@ -6,6 +6,8 @@ public class ZomberAI : MonoBehaviour
 {
     public ZomberController controller;
 
+    public ColliderManager colliderManager;
+
     [Header("State Machine")]
     // State Machine
     [SerializeField] public StateMachineDIA stateMachine;
@@ -13,13 +15,6 @@ public class ZomberAI : MonoBehaviour
     // States
     [SerializeField] public ZomberIdleState idleState;
     [SerializeField] public ZomberCombatState combatState;
-
-    
-    [Header("Colliders")]
-    // Colliders
-    public List<ColliderUpdater> colliderUpdaters;
-    private List<KeyValuePair<GameObject, Collider2D>> collisions = new List<KeyValuePair<GameObject, Collider2D>>();
-    public List<KeyValuePair<GameObject, Collider2D>> GetCollisions() { return collisions; }
 
     [Header("Idle State")]
     [Tooltip("How far the Zomber can see, remember to change the collider too for proper representation")]
@@ -63,30 +58,20 @@ public class ZomberAI : MonoBehaviour
         // Get the Controller
         controller = GetComponent<ZomberController>();
 
+        // Get Collider Manager
+        colliderManager = GetComponent<ColliderManager>();
+
         // Initialize States
         idleState = new ZomberIdleState(this);
         combatState = new ZomberCombatState(this);
 
-        // Register Colliders
-        foreach(ColliderUpdater colliderUpdater in colliderUpdaters)
-        {
-            colliderUpdater.collideEnter = OnCollideEnter;
-            colliderUpdater.collideExit = OnCollideExit;
-        }
 
         // Change to starting state
         stateMachine.SwitchState(idleState);
     }
 
-    public void OnCollideEnter(GameObject colliderObject, Collider2D other)
+    public List<KeyValuePair<GameObject, Collider2D>> GetCollisions()
     {
-        KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
-        if (!collisions.Contains(collision)) { collisions.Add(collision); }
-    }
-
-    public void OnCollideExit(GameObject colliderObject, Collider2D other)
-    {
-        KeyValuePair<GameObject, Collider2D> collision = new KeyValuePair<GameObject, Collider2D>(colliderObject, other);
-        if (collisions.Contains(collision)) { collisions.Remove(collision); }
+        return colliderManager.GetCollisions();
     }
 }
