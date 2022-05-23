@@ -51,7 +51,7 @@ public class ZomberCombatState : StateDIA
         List<GameObject> _playersVisible = new List<GameObject>();
         foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
-            if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player")
+            if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
             {
                 playerDetected = true;
                 _playersVisible.Add(collision.Value.gameObject);
@@ -82,6 +82,6 @@ public class ZomberCombatState : StateDIA
                 closestTarget = potentialTarget;
             }
         }             
-        return closestTarget;
+        return closestTarget.transform.parent.parent.gameObject;
     }
 }

@@ -19,7 +19,6 @@ public class ZCSSAttackTarget : SubStateDIA
     // Runs once before the first OnUpdate() when state is activated
     public override void OnEnter()
     {
-        Debug.Log("running coroutine attackplayer");
         MonoHelper.instance.StartCoroutine(AttackPlayer());
     }
 

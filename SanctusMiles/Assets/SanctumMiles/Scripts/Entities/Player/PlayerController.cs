@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     private PlayerInput playerInput;
+    public ColliderManager colliderManager;
 
     float move;
     float turn;
@@ -44,18 +45,24 @@ public class PlayerController : MonoBehaviour
     public Collider2D doorTrigger;
     public List<string> levels = new List<string>();
 
-    public float AttackCooldown = 0.5f;
+    [SerializeField] private float attackDamage = 20f;
+    [SerializeField] private float specialDamage = 30f;
+    [SerializeField] private float attackEndlag = 0.5f;
+    [SerializeField] private float specialEndlag = 1f;
+
     private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get references
-        rigidBody = transform.GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
 
-        playerInput = transform.GetComponent<PlayerInput>();
+        playerInput = GetComponent<PlayerInput>();
 
-        timer = AttackCooldown;
+        colliderManager = GetComponent<ColliderManager>();
+
+        timer = attackEndlag;
         
         // Set input method
         if (player1 == this)
@@ -96,14 +103,19 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
+                // Action Started
                 if(timer < 0)
                 {
                     anim.CrossFadeInFixedTime("swing left anim", 0);
-                    timer = AttackCooldown;
                 }
                 break;
             case InputActionPhase.Performed:
                 // Action Performed
+                if(timer < 0)
+                {
+                    AttackEnemies("AttackLeft", attackDamage);
+                    timer = attackEndlag;
+                }
                 break;
             case InputActionPhase.Canceled:
                 // Button Released
@@ -116,14 +128,19 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
+                // Action Started
                 if(timer < 0)
                 {
                     anim.CrossFadeInFixedTime("swing right anim", 0);
-                    timer = AttackCooldown;
                 }
                 break;
             case InputActionPhase.Performed:
                 // Action Performed
+                if(timer < 0)
+                {
+                    AttackEnemies("AttackRight", attackDamage);
+                    timer = attackEndlag;
+                }
                 break;
             case InputActionPhase.Canceled:
                 // Button Released
@@ -136,6 +153,7 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
+                // Action Started
                 if (playerCollider.IsTouching(doorTrigger))
                 {
                     SceneManager.LoadScene(levels[1]);
@@ -143,11 +161,15 @@ public class PlayerController : MonoBehaviour
                 else if (timer < 0)
                 {
                     anim.CrossFadeInFixedTime("special anim", 0);
-                    timer = AttackCooldown;
                 }
                 break;
             case InputActionPhase.Performed:
                 // Action Performed
+                if(timer < 0)
+                {
+                    AttackEnemies("Special", specialDamage);
+                    timer = attackEndlag;
+                }
                 break;
             case InputActionPhase.Canceled:
                 // Button Released
@@ -160,5 +182,30 @@ public class PlayerController : MonoBehaviour
 
         
         yield return new WaitForSeconds(1);
+    }
+
+    private void AttackEnemies(string attackType, float damage)
+    {
+        List<KeyValuePair<string, GameObject>> enemiesInRange = GetEnemiesInAttackRange();
+        foreach (KeyValuePair<string, GameObject> enemyInRange in enemiesInRange)
+        {
+            if (enemyInRange.Key == "Special")
+            {
+                enemyInRange.Value.transform.GetComponent<HealthData>().DoDamage(specialDamage);
+            }
+        }
+    }
+
+    private List<KeyValuePair<string, GameObject>> GetEnemiesInAttackRange()
+    {
+        List<KeyValuePair<string, GameObject>> enemiesInRange = new List<KeyValuePair<string, GameObject>>();
+        foreach (KeyValuePair<GameObject, Collider2D> collision in colliderManager.GetCollisions())
+        {
+            if (collision.Value.gameObject.tag == "Enemy Hurtbox")
+            {
+                enemiesInRange.Add(new KeyValuePair<string, GameObject>(collision.Key.name, collision.Value.gameObject));
+            }
+        }
+        return enemiesInRange;
     }
 }

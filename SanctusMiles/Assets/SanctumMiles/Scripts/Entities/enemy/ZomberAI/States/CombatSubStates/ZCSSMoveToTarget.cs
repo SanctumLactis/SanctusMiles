@@ -44,7 +44,7 @@ public class ZCSSMoveToTarget : SubStateDIA
     {
         foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
-            if (collision.Key.name == "Attack Distance" && collision.Value.gameObject.tag == "Player")
+            if (collision.Key.name == "Attack Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
             {
                 main.stateMachine.SwitchState(parentState.attackTargetSS);
                 break;
