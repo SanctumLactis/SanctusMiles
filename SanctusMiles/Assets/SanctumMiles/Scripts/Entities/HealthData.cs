@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthData : MonoBehaviour
 {
-    [SerializeField] private float playerHP = 100f;
+    public float playerHP = 100f;
     [SerializeField] private float regenAmount = 1f;
     [SerializeField] public float regenSpeed = 0.5f;
 
