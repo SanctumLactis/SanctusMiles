@@ -24,9 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackLeft",
                     "type": "Button",
                     "id": "9f9044f7-8890-4f97-b50f-38d014e197ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AttackRight",
+                    "type": "Button",
+                    "id": "f05a2c10-aa0d-4053-9d94-93e89f628f97",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -116,18 +125,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "AttackLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "5d2707df-ca87-4bda-ae21-31344f3c4e19",
-                    "path": "<Keyboard>/v",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c541c2d2-2713-48a1-8a44-1ca736d08d2b",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -156,9 +176,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackLeft",
                     "type": "Button",
                     "id": "888685ba-685e-4a47-a258-fccbad5acb6d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AttackRight",
+                    "type": "Button",
+                    "id": "6585877d-74d8-457f-8b24-0817b9560659",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -244,22 +273,33 @@
                 {
                     "name": "",
                     "id": "866b50f5-97be-465d-9ba4-f9ab39a4c855",
-                    "path": "<Keyboard>/period",
+                    "path": "<Keyboard>/comma",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "AttackLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "b9f03958-08ea-4ca2-aa39-410ffb1bc041",
-                    "path": "<Keyboard>/comma",
+                    "path": "<Keyboard>/minus",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "587b5b94-83a9-4c86-a8a9-ffaf3cb8d057",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

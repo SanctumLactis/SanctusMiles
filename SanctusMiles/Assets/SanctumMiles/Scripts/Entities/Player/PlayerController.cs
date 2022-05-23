@@ -91,14 +91,34 @@ public class PlayerController : MonoBehaviour
         // Debug.Log("Turn: " + turn);
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
+    public void OnAttackLeft(InputAction.CallbackContext context)
     {
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                if(timer<0)
+                if(timer < 0)
                 {
                     anim.CrossFadeInFixedTime("swing left anim", 0);
+                    timer = AttackCooldown;
+                }
+                break;
+            case InputActionPhase.Performed:
+                // Action Performed
+                break;
+            case InputActionPhase.Canceled:
+                // Button Released
+                break;
+        }
+    }
+
+    public void OnAttackRight(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started:
+                if(timer < 0)
+                {
+                    anim.CrossFadeInFixedTime("swing right anim", 0);
                     timer = AttackCooldown;
                 }
                 break;
@@ -119,6 +139,11 @@ public class PlayerController : MonoBehaviour
                 if (playerCollider.IsTouching(doorTrigger))
                 {
                     SceneManager.LoadScene(levels[1]);
+                }
+                else if (timer < 0)
+                {
+                    anim.CrossFadeInFixedTime("special anim", 0);
+                    timer = AttackCooldown;
                 }
                 break;
             case InputActionPhase.Performed:
