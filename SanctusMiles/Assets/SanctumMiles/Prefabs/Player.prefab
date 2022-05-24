@@ -505,8 +505,8 @@ MonoBehaviour:
   levels:
   - TutorialLevel
   - Level 1
-  attackDamage: 20
-  specialDamage: 30
+  attackDamage: 40
+  specialDamage: 65
   attackEndlag: 0.5
   specialEndlag: 1
 --- !u!114 &-1085547711571009182
@@ -521,7 +521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da78ec511d81241a4ab55a4fc75bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 100
   regenAmount: 1
   regenSpeed: 0.5
 --- !u!114 &7214379746991272701

@@ -29,8 +29,10 @@ public class menu2_theprequel : MonoBehaviour
         playbuttonsAnimator.Play("ClickPlay_mainbuttonsmove");
     }
 
-    public void StartGame()
+    public void StartGame(int playerCount)
     {
+        PlayerPrefs.SetInt("playerCount", playerCount);
+
         SceneManager.LoadScene(1);
     }
 }
