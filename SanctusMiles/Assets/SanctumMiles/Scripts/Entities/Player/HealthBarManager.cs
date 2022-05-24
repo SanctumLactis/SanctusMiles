@@ -19,11 +19,12 @@ public class HealthBarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnDestroy()
     {
         Destroy(healthBar);
+        GameManager.playersAlive = GameManager.playersAlive - 1;
     }
 }

@@ -30,7 +30,9 @@ public class HealthData : MonoBehaviour
         {
             health = 0f;
             Destroy(gameObject);
+            //GameManager.playersAlive = GameManager.playersAlive - 1;
         }
+        //Debug.Log(GameManager.playersAlive);
     }
 
     IEnumerator HealthRegen()

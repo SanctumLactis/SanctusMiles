@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int defaultPlayerCount = 2;
 
+    public static float playersAlive;
 
     private GameObject players;
     private GameObject cameraSystem;
     private CinemachineTargetGroup targetGroup;
+
+    [SerializeField] private GameObject gameOver;
 
     public static GameManager instance;
 
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("playerCount") == 2)
             CreatePlayer(player2Spawn);
+
+        playersAlive = PlayerPrefs.GetInt("playerCount");
     }
 
     private GameObject CreatePlayer(Vector3 spawnPosition)
@@ -55,5 +60,11 @@ public class GameManager : MonoBehaviour
         GameObject player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity, players.transform);
         targetGroup.AddMember(player.transform, 1, 3);
         return player;
+    }
+
+    void Update()
+    {
+        if(playersAlive == 0)
+            gameOver.SetActive(true);
     }
 }

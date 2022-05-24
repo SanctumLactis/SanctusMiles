@@ -25,7 +25,7 @@ public class menu2_theprequel : MonoBehaviour
 
     public void PlayMenu()
     {
-        playbuttons.SetActive(true);
+        playbuttons.GetComponent<Animator> ().Play ("ClickPlay_buttonsmove");
         playbuttonsAnimator.Play("ClickPlay_mainbuttonsmove");
     }
 
@@ -34,5 +34,16 @@ public class menu2_theprequel : MonoBehaviour
         PlayerPrefs.SetInt("playerCount", playerCount);
 
         SceneManager.LoadScene(1);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Back()
+    {
+        playbuttons.GetComponent<Animator> ().Play ("ClickBack_Buttonsmove");
+        playbuttonsAnimator.Play("ClickBack_mainButtonsmove");
     }
 }

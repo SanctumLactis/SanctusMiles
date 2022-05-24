@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4221163479842017737}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,3 +155,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 0}
   cameraSystemPrefab: {fileID: 0}
+  defaultPlayerCount: 2
+  playersAlive: 0
