@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("playerCount", defaultPlayerCount);
         // Defaults to defaultPlayerCount if it has not been specified before this.
         if (PlayerPrefs.GetInt("playerCount") != 1 && PlayerPrefs.GetInt("playerCount") != 2)
             PlayerPrefs.SetInt("playerCount", defaultPlayerCount);
