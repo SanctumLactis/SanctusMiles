@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
         colliderManager = GetComponent<ColliderManager>();
 
+        GameObject hitBoxes = transform.GetChild(1).gameObject;
+
         timer = attackEndlag;
         
         // Set input method
@@ -69,6 +71,9 @@ public class PlayerController : MonoBehaviour
             playerInput.SwitchCurrentActionMap("Player 1");
         else if (player2 == this)
             playerInput.SwitchCurrentActionMap("Player 2");
+
+        // Enable hitboxes
+        hitBoxes.SetActive(true);
     }
 
     // Update is called once per frame
@@ -186,13 +191,16 @@ public class PlayerController : MonoBehaviour
 
     private void AttackEnemies(string attackType, float damage)
     {
+        Debug.Log("attacking enemies");
         List<KeyValuePair<string, GameObject>> enemiesInRange = GetEnemiesInAttackRange();
         foreach (KeyValuePair<string, GameObject> enemyInRange in enemiesInRange)
         {
-            if (enemyInRange.Key == "Special")
+            if (enemyInRange.Key == attackType)
             {
-                enemyInRange.Value.transform.GetComponent<HealthData>().DoDamage(specialDamage);
+                Debug.Log(enemyInRange.Value.name);
+                enemyInRange.Value.GetComponent<HealthData>().DoDamage(damage);
             }
+            
         }
     }
 
@@ -203,7 +211,8 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.Value.gameObject.tag == "Enemy Hurtbox")
             {
-                enemiesInRange.Add(new KeyValuePair<string, GameObject>(collision.Key.name, collision.Value.gameObject));
+                Debug.Log(collision.Key.name + " " + collision.Value.gameObject.name);
+                enemiesInRange.Add(new KeyValuePair<string, GameObject>(collision.Key.name, collision.Value.transform.parent.parent.gameObject));
             }
         }
         return enemiesInRange;

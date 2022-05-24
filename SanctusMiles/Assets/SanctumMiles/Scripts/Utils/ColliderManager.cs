@@ -8,7 +8,12 @@ public class ColliderManager : MonoBehaviour
     // Colliders
     public List<ColliderUpdater> colliderUpdaters;
     private List<KeyValuePair<GameObject, Collider2D>> collisions = new List<KeyValuePair<GameObject, Collider2D>>();
-    public List<KeyValuePair<GameObject, Collider2D>> GetCollisions() { return collisions; }
+    public List<KeyValuePair<GameObject, Collider2D>> GetCollisions() 
+    {
+        collisions.RemoveAll(collision => collision.Value == null);
+        return collisions;
+        
+    }
 
     // Start is called before the first frame update
     void Start()

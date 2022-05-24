@@ -25,7 +25,7 @@ public class HealthData : MonoBehaviour
         if (playerHP <= 0)
         {
             playerHP = 0f;
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
