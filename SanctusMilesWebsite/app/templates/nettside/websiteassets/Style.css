@@ -12,9 +12,6 @@
     text-align: center;font-size: 40px;
 }
 
-
-
-
 #sidenav {
     font-size:2vw;cursor:pointer;
     color:#ffa500;
@@ -32,8 +29,6 @@
   display: none;
   text-align: center;
 }
-      
-
       
  /* Fixer knappene for å gå frem og tilbake i galleriet */
 .prev,
