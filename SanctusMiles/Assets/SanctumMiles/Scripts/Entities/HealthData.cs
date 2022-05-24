@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HealthData : MonoBehaviour
 {
-    public float playerHP = 100f;
+    private float health = 100f;
+    public float GetHealth() { return health; }
     [SerializeField] private float regenAmount = 1f;
-    [SerializeField] public float regenSpeed = 0.5f;
-
+    [SerializeField] private float regenSpeed = 0.5f;
 
 
     // Start is called before the first frame update
@@ -19,33 +19,34 @@ public class HealthData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHP > 100f)
-            playerHP = 100f;
+        if (health > 100f)
+            health = 100f;
         
-        if (playerHP <= 0)
+        if (health <= 0)
         {
-            playerHP = 0f;
+            health = 0f;
             Destroy(gameObject);
         }
     }
 
-    void FixedUpdate()
-    {
-    }
-
     IEnumerator HealthRegen()
     {
-        while (playerHP > 0)
+        while (health > 0)
         {
-            if (playerHP < 100f)
-                playerHP += regenAmount;
+            if (health < 100f)
+                health += regenAmount;
             
             yield return new WaitForSeconds(regenSpeed);
         }
     }
 
-    public void DoDamage(float damage)
+    public float DoDamage(float damage)
     {
-        playerHP -= damage;
+        health -= damage;
+        if (health <= 0)
+        {
+            health = 0f;
+        }
+        return health;
     }
 }

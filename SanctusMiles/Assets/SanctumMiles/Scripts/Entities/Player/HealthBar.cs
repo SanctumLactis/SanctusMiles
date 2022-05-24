@@ -53,6 +53,6 @@ public class HealthBar : MonoBehaviour
     {
         transform.position = player.transform.position + new Vector3(0, -1, 0);
         //gweendata e bytte bare på scalen 
-        gweenBar.transform.localScale = new Vector3(healthData.playerHP, 4f, 1f);
+        gweenBar.transform.localScale = new Vector3(healthData.GetHealth(), 4f, 1f);
     }
 }
