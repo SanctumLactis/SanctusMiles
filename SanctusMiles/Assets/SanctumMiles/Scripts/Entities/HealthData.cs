@@ -1,9 +1,11 @@
+using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthData : MonoBehaviour
 {
+    private Rigidbody2D rigidBody;
     private float health = 100f;
     public float GetHealth() { return health; }
     [SerializeField] private float regenAmount = 1f;
@@ -13,6 +15,8 @@ public class HealthData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rigidBody = GetComponent<Rigidbody2D>();
+
         StartCoroutine(HealthRegen());
     }
 
@@ -40,8 +44,10 @@ public class HealthData : MonoBehaviour
         }
     }
 
-    public float DoDamage(float damage)
+    public float DoDamage(float damage, float knockback=100)
     {
+        rigidBody.AddForce(transform.right * knockback * Time.deltaTime, ForceMode2D.Impulse);
+
         health -= damage;
         if (health <= 0)
         {
