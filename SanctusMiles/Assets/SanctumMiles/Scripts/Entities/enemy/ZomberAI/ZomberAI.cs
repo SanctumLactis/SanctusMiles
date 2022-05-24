@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ZomberAI : MonoBehaviour
 {
-    public ZomberController controller;
+    [HideInInspector] public ZomberController controller;
 
-    public ColliderManager colliderManager;
+    [HideInInspector] public ColliderManager colliderManager;
 
     [Header("State Machine")]
     // State Machine
