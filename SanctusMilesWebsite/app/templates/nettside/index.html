@@ -2,32 +2,13 @@
 <html lang="en">
 
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.typekit.net/yic4bwc.css">
+<link rel="stylesheet" href="websiteassets/style.css">
+
+
 <style>
-  div.relative {
-    position:relative;
-    bottom: 115px;
-}
-    h1 {text-align: center;font-size: 40px;}
-    h2 {text-align: center;font-size: 40px;}
-    h3 {text-align: center;font-size: 40px;}
-
-    .vertical-menu {width: 300px;}
-
-.vertical-menu a {background-color:#a711cc;
-color:aqua;
-display: block;
-padding: 12px;
-text-decoration: none;}
-
-.vertical-menu a:hover {background-color:blueviolet;}
-
-.vertical-menu a.active {background-color:cornflowerblue;
-color:white;}
-body {
-font-family: "Arial", "Arial";
-}
 
 .sidenav {
 height: 100%;
@@ -81,13 +62,7 @@ margin-left: 50px;
 
 <div class = "background"></div>
 
-<link rel="stylesheet" href="websiteassets/style.css">
-
-
-
 </head>
-
-   
 
 <body bgcolor="#04011b">
   <div id="mySidenav" class="sidenav">
@@ -135,7 +110,7 @@ margin-left: 50px;
                                     
                                   
 
-      </br></br></br></br>
+      </br></br></br></br></br></br></br>
 
     </label>
     </tr>
@@ -146,9 +121,8 @@ style='display: block; margin: 0 auto;'
 width="560" 
 height="315" 
 src="https://www.youtube.com/embed/d1YBv2mWll0" 
-title="YouTube video player" 
+title="Informational video about our game" 
 frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
   
   
@@ -158,7 +132,7 @@ allowfullscreen></iframe>
                 Som du kan se, ser spillet plettfritt ut selv om bildene her ikke har gått gjennom utallige redigeringsprogram
                 for å få dem til å se bedre ut. Vi kan takke de veldig talentfulle grafiske designerene og de vidunderlige
                 leveldesignerene for disse nydelige kunstverkene vi er så heldige å kunne se
-    </br></br></br>
+    </br></br></br></br></br></br>
 
         </label>
   </tr>
@@ -166,7 +140,6 @@ allowfullscreen></iframe>
   
 <div class="container">
 
-  <!--legger til bildene i galleriet-->
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
       <img src="websiteassets/Pictures/galleri/galleri1.jpg" style="width:25%">
@@ -201,32 +174,6 @@ allowfullscreen></iframe>
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-  <!-- Tekst som sier noe om bildene -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri1.jpg" style="width:100%" onclick="currentSlide(1)" alt="gallery1">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri2.png" style="width:100%" onclick="currentSlide(2)" alt="gallery2">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri3.jpg" style="width:100%" onclick="currentSlide(3)" alt="gallery3">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri4.jpg" style="width:100%" onclick="currentSlide(4)" alt="gallery4">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri5.png" style="width:100%" onclick="currentSlide(5)" alt="gallry5">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="websiteassets/Pictures/galleri/galleri6.png" style="width:100%" onclick="currentSlide(6)" alt="gallery6">
-    </div>
-  </div>
 </div>
 
 <script>
@@ -247,7 +194,7 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
