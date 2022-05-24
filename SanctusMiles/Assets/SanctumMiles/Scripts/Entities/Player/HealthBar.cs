@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HPbar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
 
-    public static HPbar healthBar1;
-    public static HPbar healthBar2;
+    public static HealthBar healthBar1;
+    public static HealthBar healthBar2;
 
     public void Awake()
     {
