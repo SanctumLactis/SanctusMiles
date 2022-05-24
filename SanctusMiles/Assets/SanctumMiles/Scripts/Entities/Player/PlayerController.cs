@@ -159,11 +159,11 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Started:
                 // Action Started
-                if (playerCollider.IsTouching(doorTrigger))
-                {
-                    SceneManager.LoadScene(levels[1]);
-                }
-                else if (timer < 0)
+                //if (playerCollider.IsTouching(doorTrigger))
+                //{
+                //    SceneManager.LoadScene(levels[1]);
+                //}
+                if (timer < 0)
                 {
                     anim.CrossFadeInFixedTime("special anim", 0);
                 }

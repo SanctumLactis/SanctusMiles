@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7356296856426700344}
   m_Layer: 0
   m_Name: doortrigger
-  m_TagString: DOOR
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
