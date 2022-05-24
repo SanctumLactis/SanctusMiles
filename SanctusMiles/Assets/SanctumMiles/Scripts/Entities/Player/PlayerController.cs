@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
                 //}
                 if (timer < 0)
                 {
-                    anim.CrossFadeInFixedTime("special anim", 0);
+                    anim.CrossFadeInFixedTime("SpecialAttack", 0);
                 }
                 break;
             case InputActionPhase.Performed:
@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour
                 if(timer < 0)
                 {
                     AttackEnemies("Special", specialDamage);
-                    timer = attackEndlag;
+                    timer = specialEndlag;
                 }
                 break;
             case InputActionPhase.Canceled:
