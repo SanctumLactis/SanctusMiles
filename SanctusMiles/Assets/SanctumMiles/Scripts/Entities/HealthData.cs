@@ -30,7 +30,7 @@ public class HealthData : MonoBehaviour
         {
             health = 0f;
             Destroy(gameObject);
-            audioSourceDeath.Play(1);
+            audioSourceDeath.Play(0);
             //GameManager.playersAlive = GameManager.playersAlive - 1;
         }
         //Debug.Log(GameManager.playersAlive);
