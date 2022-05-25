@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.typekit.net/yic4bwc.css">
-<link rel="stylesheet" href="websiteassets/Style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 
 <style>
 
@@ -98,7 +98,7 @@ Dette er bare for å forbedre brukererfaringen
 */
 
 .background {
-  background-image: url("websiteassets/Pictures/titlescreen.png");
+  background-image: url("static/media/images/titlescreen.png");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -129,10 +129,10 @@ som inneholder alle definisjonene på alle elementene i menyen, inkludert menyen
 <!-- Her kaller vi inn en javascript funksjon når vi trykker på lukkeknappen til menyen
     Det som skjer i funksjonen bli definert lenger nede -->
 
-    <a href="websiteassets/eldin.html" target="_blank"> Eldin</a>
-    <a href="websiteassets/geir.html" target="_blank">Geir</a>
-    <a href="websiteassets/jonas.html" target="_blank">Jonas</a>
-    <a href="websiteassets/jens.html" target="_blank">Jens</a>
+    <a href="/docs/eldin" target="_blank"> Eldin</a>
+    <a href="/docs/geir" target="_blank">Geir</a>
+    <a href="/docs/jonas" target="_blank">Jonas</a>
+    <a href="/docs/jens" target="_blank">Jens</a>
 <!-- Her setter jeg inn de forskjellige tingene du kan trykke på inne i selve menyen
     I form av tekstelementer utstyrt med en hyperlink til en html fil som ligger i mappen "websiteassets"
     som tar deg over til en sub-side av ditt valg
@@ -226,32 +226,32 @@ allowfullscreen></iframe>
 
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri1.jpg" style="width:50%">
+      <img src="{{ url_for('static', filename='media/images/galleri/galleri1.jpg') }}" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">2 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri2.jpg" style="width:50%">
+      <img src="{{ url_for('static', filename='media/images/galleri/galleri2.jpg') }}" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">3 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri3.jpg" style="width:50%">
+      <img src="{{ url_for('static', filename='media/images/galleri/galleri3.jpg') }}" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">4 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri4.jpg" style="width:50%">
+      <img src="{{ url_for('static', filename='media/images/galleri/galleri4.jpg') }}" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">5 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri5.jpg" style="width:50%">
+    <img src="{{ url_for('static', filename='media/images/galleri/galleri5.jpg') }}" style="width:50%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">6 / 6</div>
-      <img src="websiteassets/Pictures/galleri/galleri6.jpg" style="width:50%">
+    <img src="{{ url_for('static', filename='media/images/galleri/galleri6.jpg') }}" style="width:50%">
   </div>
 
   <!-- Vi begynner med å lage en klasse som heter «mySlides» der vi kan legge inn bildene
@@ -337,8 +337,8 @@ Du kan se at vi bruker en «slideIndex» og den nye variabelen «slides»  til �
                   defaulText» er en ID som jeg har laget inne i en egen CSS fil som inneholder alt av
                   hvordan jeg vil at f.eks tekst skal se ut. Mer om det senere i CSS filen -->
 
-                  <a href="Pictures/test.txt" download>
-                  <img src="websiteassets/Pictures/Title screen.png" alt="Dokumentasjonen til Jens">
+                  <a href="{{ url_for('static', filename='media/game') }}" download>
+                  <img src="{{ url_for('static', filename='media/images/titlescreen.png') }}" alt="download">
                   </a>
                   <!-- Under denne spesifike tekstboksen, (og et par andre) har jeg lagt til denne korte koden.
                   Det dette gjør er at jeg kan skrive inn en fil som jeg vil laste ned (med bruk av «a href «____» download)

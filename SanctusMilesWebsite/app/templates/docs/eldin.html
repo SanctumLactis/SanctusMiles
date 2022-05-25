@@ -4,7 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.typekit.net/yic4bwc.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 
 <style>
 
@@ -47,13 +47,17 @@ margin-left: 50px;
 .sidenav a {font-size: 18px;}
 }
 
+table, th, td {
+  border: 1px black;
+}
+
 .background {
-  background-image: url("Pictures/titlescreen.png");
+  background-image: url("{{ url_for('static', filename='media/images/titlescreen.png') }}");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 </style>
@@ -66,11 +70,11 @@ margin-left: 50px;
 <body bgcolor="#04011b">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0) class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/index.html" target="_blank"> Hjem</a>
-    <a href="eldin.html" target="_blank"> Eldin</a>
-    <a href="geir.html" target="_blank">Geir</a>
-    <a href="jonas.html" target="_blank">Jonas</a>
-    <a href="jens.html" target="_blank">Jens</a>
+    <a href="/" target="_blank"> Hjem</a>
+    <a href="eldin" target="_blank"> Eldin</a>
+    <a href="geir" target="_blank">Geir</a>
+    <a href="jonas" target="_blank">Jonas</a>
+    <a href="jens" target="_blank">Jens</a>
   </div>
   
   
@@ -87,20 +91,22 @@ margin-left: 50px;
   }
   </script>
      
-<h1><p id="defaultHeadline">Dokumentasjonen til Jens</p></h1>
+
+
+<h1><p id="defaultHeadline">Dokumentasjonen til Eldin</p></h1>
+  
+  
   
 <table id="defaultText">
       <tr>
         <td>
-          <label>Jens sine arbeidsoppgaver har ikke gått så mye utover selve spillet, 
-                      men han har hatt viktig arbei å gjøre uansett</br>
-                      Hovedarbeidet hans har gått mest ut på å bygge opp nettsiden til spillet og all dokumentasjonen,</br>
-                      men han har også laget noen grafiske elementer og spilt inn lydeffektene til spillet.</br>
-                      Under kan du laste ned word filen der han har skrevet mer i dybden om hva han har gjort.
+          <label>Eldin har arbeidet mye med koding av spillet </br>
+                      og har bidratt mye med å sørge for at spillet fungerer slik det skal. </br>
+                      Han har også satt sammen alle nivåene i spillet i et digitalt, spillbart område.</br>
                       </br></br></br></br></br></br></br></br>
 
-                      <a href="dokumentasjon/jensDokumentasjon.docx" download>
-                      <img src="Pictures/POG.png" alt="Last ned dokumentasjonen til Jens">
+                      <a href="{{ url_for('static', filename='media/docs/eldinDokumentasjon.docx') }}" download>
+                      <img src="Pictures/POG.png" alt="Last ned dokumentasjonen til Eldin">
                       </a>
           </label>
         </td>

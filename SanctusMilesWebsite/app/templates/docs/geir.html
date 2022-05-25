@@ -4,7 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.typekit.net/yic4bwc.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 
 <style>
 
@@ -52,7 +52,7 @@ table, th, td {
 }
 
 .background {
-  background-image: url("Pictures/titlescreen.png");
+  background-image: url("{{ url_for('static', filename='media/images/titlescreen.png') }}");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -70,11 +70,11 @@ table, th, td {
 <body bgcolor="#04011b">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0) class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/index.html" target="_blank"> Hjem</a>
-    <a href="eldin.html" target="_blank"> Eldin</a>
-    <a href="geir.html" target="_blank">Geir</a>
-    <a href="jonas.html" target="_blank">Jonas</a>
-    <a href="jens.html" target="_blank">Jens</a>
+    <a href="/" target="_blank"> Hjem</a>
+    <a href="eldin" target="_blank"> Eldin</a>
+    <a href="geir" target="_blank">Geir</a>
+    <a href="jonas" target="_blank">Jonas</a>
+    <a href="jens" target="_blank">Jens</a>
   </div>
   
   
@@ -104,7 +104,7 @@ table, th, td {
                         Han lagde all musikk i spillet og hjalp mye til med programmering og lydeffekter
                         </br></br></br></br>
 
-                       <a href="dokumentasjon/geirDokumentasjon.docx" download>
+                       <a href="{{ url_for('static', filename='media/docs/geirDokumentasjon.docx') }}" download>
                        <img src="Pictures/POG.png" alt="last ned dokumentasjonen til Geir">
                        </a>
          </label>

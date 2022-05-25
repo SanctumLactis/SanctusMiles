@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for
 from prometheus_client import generate_latest
 
-from app.components.utils import get_user, apply_metrics
+from app.components.utils import apply_metrics
 
 mod = Blueprint("index", __name__, url_prefix="/")
 
@@ -9,17 +9,13 @@ mod = Blueprint("index", __name__, url_prefix="/")
 @apply_metrics(endpoint="/")
 @mod.route("/")
 def index():
-    return redirect(url_for("index.home"))
+    return render_template("index.html")
+
 
 @apply_metrics(endpoint="/home")
-@mod.route("/home", methods=["POST", "GET"])
-@get_user
+@mod.route("/home")
 def home(user):
-    if user is False:
-        # User not signed in
-        return render_template("home.html")
-
-    return redirect(url_for("user.index"))
+    return redirect(url_for("index.index"))
 
 
 @apply_metrics(endpoint="/metrics")

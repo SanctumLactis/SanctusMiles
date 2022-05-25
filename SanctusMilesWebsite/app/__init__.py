@@ -70,20 +70,10 @@ from app.modules.index import index_mod
 
 app.register_blueprint(index_mod)
 
-# Auth Module
-from app.modules.auth import auth_mod
+# docs Module
+from app.modules.docs import docs_mod
 
-app.register_blueprint(auth_mod)
-
-# User Module
-from app.modules.user import user_mod
-
-app.register_blueprint(user_mod)
-
-# API Module
-from app.modules.api import api_mod
-
-app.register_blueprint(api_mod)
+app.register_blueprint(docs_mod)
 
 
 def serve_app(app):

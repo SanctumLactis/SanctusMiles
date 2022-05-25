@@ -4,7 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.typekit.net/yic4bwc.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 
 <style>
 
@@ -47,17 +47,13 @@ margin-left: 50px;
 .sidenav a {font-size: 18px;}
 }
 
-table, th, td {
-  border: 1px black;
-}
-
 .background {
-  background-image: url("Pictures/titlescreen.png");
+  background-image: url("{{ url_for('static', filename='media/images/titlescreen.png') }}");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 
 </style>
@@ -70,11 +66,11 @@ table, th, td {
 <body bgcolor="#04011b">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0) class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/index.html" target="_blank"> Hjem</a>
-    <a href="eldin.html" target="_blank"> Eldin</a>
-    <a href="geir.html" target="_blank">Geir</a>
-    <a href="jonas.html" target="_blank">Jonas</a>
-    <a href="jens.html" target="_blank">Jens</a>
+    <a href="/" target="_blank"> Hjem</a>
+    <a href="eldin" target="_blank"> Eldin</a>
+    <a href="geir" target="_blank">Geir</a>
+    <a href="jonas" target="_blank">Jonas</a>
+    <a href="jens" target="_blank">Jens</a>
   </div>
   
   
@@ -91,26 +87,24 @@ table, th, td {
   }
   </script>
      
-
-
-<h1><p id="defaultHeadline">Dokumentasjonen til Jonas</p></h1>
-  
-  
+<h1><p id="defaultHeadline">Dokumentasjonen til Jens</p></h1>
   
 <table id="defaultText">
       <tr>
         <td>
-          <label>Jonas har bidratt mye med koding av spillet </br>
-                      og vært en del av å sørge for at spillet fungerer som det skal. </br>
-                      Han har også satt opp en del av grunnlaget slik at kode arbeidet går glattere.</br>
-                      </br></br></br></br></br></br></br></br></br>
-                            
-                      <a href="Pictures/test.txt" download>
-                      <img src="Pictures/POG.png" alt="Last ned dokumentasjonen til Jonas">
+          <label>Jens sine arbeidsoppgaver har ikke gått så mye utover selve spillet, 
+                      men han har hatt viktig arbei å gjøre uansett</br>
+                      Hovedarbeidet hans har gått mest ut på å bygge opp nettsiden til spillet og all dokumentasjonen,</br>
+                      men han har også laget noen grafiske elementer og spilt inn lydeffektene til spillet.</br>
+                      Under kan du laste ned word filen der han har skrevet mer i dybden om hva han har gjort.
+                      </br></br></br></br></br></br></br></br>
+
+                      <a href="{{ url_for('static', filename='media/docs/jensDokumentasjon.docx') }}" download>
+                      <img src="Pictures/POG.png" alt="Last ned dokumentasjonen til Jens">
                       </a>
           </label>
-       </td>
-     </tr>
+        </td>
+      </tr>
 </table>
 
 </br>
