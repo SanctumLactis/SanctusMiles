@@ -294,6 +294,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6a586ffb-dcbc-4ea9-acb0-73b2077aface",
+                    "path": "<Keyboard>/slash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "587b5b94-83a9-4c86-a8a9-ffaf3cb8d057",
                     "path": "<Keyboard>/period",
                     "interactions": "",

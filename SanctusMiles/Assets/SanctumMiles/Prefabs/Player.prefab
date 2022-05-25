@@ -731,8 +731,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6585877d-74d8-457f-8b24-0817b9560659
     m_ActionName: Player 2/AttackRight[/Keyboard/period]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Main
   m_DefaultActionMap: Player 1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
