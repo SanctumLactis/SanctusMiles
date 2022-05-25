@@ -4697,7 +4697,7 @@ PrefabInstance:
       objectReference: {fileID: 3281677409336062820, guid: 8a76c01b57c81c94799f87c41cb03105, type: 3}
     - target: {fileID: 4221163479842017737, guid: af15ed44b0e5a9f4c8c6227857d1118c, type: 3}
       propertyPath: forcePlayerCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4221163479842017737, guid: af15ed44b0e5a9f4c8c6227857d1118c, type: 3}
       propertyPath: cameraSystemPrefab
