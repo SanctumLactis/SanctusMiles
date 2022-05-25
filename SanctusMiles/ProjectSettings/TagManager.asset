@@ -12,6 +12,7 @@ TagManager:
   - Door
   - DOOR
   - NextLevel
+  - YepKey
   layers:
   - Default
   - TransparentFX
