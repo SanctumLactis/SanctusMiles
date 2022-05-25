@@ -778,6 +778,7 @@ MonoBehaviour:
   maxHealth: 100
   regenAmount: 1
   regenSpeed: 0.5
+  health: 0
   audioSourceDeath: {fileID: 4567571895550862595}
 --- !u!114 &7214379746991272701
 MonoBehaviour:
@@ -835,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6697226941005824644
 Transform:
   m_ObjectHideFlags: 0
