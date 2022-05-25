@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: -1599810746059181365}
   - component: {fileID: 8799243374632994752}
   m_Layer: 7
-  m_Name: Zomber
+  m_Name: zomber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,13 +442,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: -1511312782069050383}
+  colliderManager: {fileID: 0}
   stateMachine:
     currentStateName: 
     currentSubStateNames: []
   viewDistance: 4.5
   switchWanderTimeMin: 2
   switchWanderTimeMax: 5
-  colliderManager: {fileID: 0}
   wanderSpeed: 300
   wanderRange: 3.5
   switchIdleDistance: 0.25
@@ -469,9 +469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da78ec511d81241a4ab55a4fc75bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 100
   regenAmount: 1
   regenSpeed: 0.75
+  audioSourceDeath: {fileID: 0}
 --- !u!114 &8799243374632994752
 MonoBehaviour:
   m_ObjectHideFlags: 0

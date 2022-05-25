@@ -10,7 +10,7 @@ public class HealthData : MonoBehaviour
     public float GetHealth() { return health; }
     [SerializeField] private float regenAmount = 1f;
     [SerializeField] private float regenSpeed = 0.5f;
-
+    public AudioSource audioSourceDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,7 @@ public class HealthData : MonoBehaviour
         {
             health = 0f;
             Destroy(gameObject);
+            audioSourceDeath.Play(1);
             //GameManager.playersAlive = GameManager.playersAlive - 1;
         }
         //Debug.Log(GameManager.playersAlive);

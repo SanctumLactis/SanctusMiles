@@ -5220,6 +5220,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
+    - target: {fileID: 689823331818814386, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8588454975597657513, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: m_Name
       value: Zomber (1)
