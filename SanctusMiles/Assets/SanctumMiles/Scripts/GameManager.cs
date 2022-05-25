@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,8 +19,11 @@ public class GameManager : MonoBehaviour
     private GameObject cameraSystem;
     private CinemachineTargetGroup targetGroup;
 
+    // Menus
     [SerializeField] private GameObject gameOverPrefab;
     private GameObject gameOver;
+    [SerializeField] private GameObject quickMenuPrefab;
+    private GameObject quickMenu;
 
     public static GameManager instance;
 
@@ -47,9 +51,13 @@ public class GameManager : MonoBehaviour
 
         targetGroup = cameraSystem.transform.GetComponentInChildren<CinemachineTargetGroup>();
         
-        // Create Game Over Screen
+        // Create Game Over Menu
         gameOver = Instantiate(gameOverPrefab);
         gameOver.SetActive(false);
+        
+        // Create Quick Menu
+        quickMenu = Instantiate(quickMenuPrefab);
+        quickMenu.SetActive(false);
         
         // Create Players
         players = new GameObject();
@@ -68,6 +76,23 @@ public class GameManager : MonoBehaviour
         GameObject player = Instantiate(playerPrefab, spawnPosition, Quaternion.identity, players.transform);
         targetGroup.AddMember(player.transform, 1, 3);
         return player;
+    }
+
+    public void QuickMenu(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started:
+                // Action Started
+                break;
+            case InputActionPhase.Performed:
+                // Action Performed
+                quickMenu.SetActive(!quickMenu.activeSelf);
+                break;
+            case InputActionPhase.Canceled:
+                // Button Released
+                break;
+        }
     }
 
     void Update()

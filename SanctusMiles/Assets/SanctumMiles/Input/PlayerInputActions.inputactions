@@ -317,6 +317,34 @@
             ]
         },
         {
+            "name": "Universal",
+            "id": "e7414de4-0af9-4ad7-a254-6dfe6e6bce71",
+            "actions": [
+                {
+                    "name": "QuickMenu",
+                    "type": "Button",
+                    "id": "48fb1fd5-834f-4d96-95ce-c154b1451c92",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "81f8bb15-0f0a-4c35-b35b-eb6b11e2e9c5",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuickMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "UI",
             "id": "99f438d1-13bd-4236-92c9-b3a9637c1b94",
             "actions": [

@@ -84,7 +84,10 @@ public class ZomberCombatState : StateDIA
                 closestDistanceSqr = distanceToTarget;
                 closestTarget = potentialTarget;
             }
-        }             
-        return closestTarget.transform.parent.parent.gameObject;
+        }
+        if (closestTarget != null)
+            return closestTarget.transform.parent.parent.gameObject;
+        else
+            return null;
     }
 }
