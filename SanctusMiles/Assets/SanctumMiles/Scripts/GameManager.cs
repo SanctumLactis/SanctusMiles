@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject cameraSystemPrefab;
 
+    [SerializeField] private bool forcePlayerCount = false;
     [SerializeField] private int defaultPlayerCount = 2;
 
     public static float playersAlive;
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Defaults to defaultPlayerCount if it has not been specified before this.
-        if (PlayerPrefs.GetInt("playerCount") != 1 && PlayerPrefs.GetInt("playerCount") != 2)
+        if (PlayerPrefs.GetInt("playerCount") != 1 && PlayerPrefs.GetInt("playerCount") != 2 || forcePlayerCount == true)
             PlayerPrefs.SetInt("playerCount", defaultPlayerCount);
 
         // Get Player Spawn Positions

@@ -8,8 +8,7 @@ public class HealthData : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float regenAmount = 1f;
     [SerializeField] private float regenSpeed = 0.5f;
-
-    private float health;
+    [SerializeField] private float health;
     public float GetHealth() { return health; }
 
     private Rigidbody2D rigidBody;
@@ -33,8 +32,11 @@ public class HealthData : MonoBehaviour
         if (health <= 0)
         {
             health = 0f;
+            if (audioSourceDeath != null)
+            {
+                audioSourceDeath.Play(0);
+            }
             Destroy(gameObject);
-            audioSourceDeath.Play(0);
             //GameManager.playersAlive = GameManager.playersAlive - 1;
         }
         //Debug.Log(GameManager.playersAlive);
@@ -51,7 +53,7 @@ public class HealthData : MonoBehaviour
         }
     }
 
-    public float DoDamage(float damage, float knockback=100)
+    public float DoDamage(float damage, float knockback=6.9f)
     {
         rigidBody.AddForce(transform.right * -knockback, ForceMode2D.Impulse);
 
