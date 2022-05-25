@@ -402,7 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8588454975597657526}
   - component: {fileID: 8588454975597657525}
-  - component: {fileID: 8588454975597657524}
+  - component: {fileID: 5332219786337937031}
   - component: {fileID: -1511312782069050383}
   - component: {fileID: 7339683986521382709}
   - component: {fileID: -1599810746059181365}
@@ -456,8 +456,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8588454975597657524
-BoxCollider2D:
+--- !u!58 &5332219786337937031
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -470,18 +470,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.14, y: 0.15}
-    newSize: {x: 0.15, y: 0.14}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.05, y: 1.12}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &-1511312782069050383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da78ec511d81241a4ab55a4fc75bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   regenAmount: 1
   regenSpeed: 0.75
   audioSourceDeath: {fileID: 0}
