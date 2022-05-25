@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
 
     private float timer;
 
+    AudioSource audioSource;
+    public AudioSource audioSourceAttack;
+    public AudioSource audioSourceHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +69,10 @@ public class PlayerController : MonoBehaviour
         GameObject hitBoxes = transform.GetChild(1).gameObject;
 
         timer = attackEndlag;
+
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.volume = 0f;
         
         // Set input method
         if (player1 == this)
@@ -80,6 +88,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+
+        //Debug.Log(rigidBody.velocity.magnitude);
+
+        if(rigidBody.velocity.magnitude > 0.5) //Make This a small number
+                audioSource.volume = 0.5f;
+        else
+                audioSource.volume = 0f;
     }
 
     void FixedUpdate()
@@ -93,6 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         move = context.ReadValue<float>();
         //Debug.Log("Move: " + move);
+
     }
 
     public void OnTurn(InputAction.CallbackContext context)
@@ -112,6 +128,7 @@ public class PlayerController : MonoBehaviour
                 if(timer < 0)
                 {
                     anim.CrossFadeInFixedTime("swing left anim", 0);
+                    audioSourceAttack.Play(0);
                 }
                 break;
             case InputActionPhase.Performed:
@@ -137,6 +154,7 @@ public class PlayerController : MonoBehaviour
                 if(timer < 0)
                 {
                     anim.CrossFadeInFixedTime("swing right anim", 0);
+                    audioSourceAttack.Play(0);
                 }
                 break;
             case InputActionPhase.Performed:
@@ -166,6 +184,7 @@ public class PlayerController : MonoBehaviour
                 if (timer < 0)
                 {
                     anim.CrossFadeInFixedTime("SpecialAttack", 0);
+                    audioSourceAttack.Play(0);
                 }
                 break;
             case InputActionPhase.Performed:
@@ -199,6 +218,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log(enemyInRange.Value.name);
                 enemyInRange.Value.GetComponent<HealthData>().DoDamage(damage);
+                audioSourceHit.Play(0);
             }
             
         }
