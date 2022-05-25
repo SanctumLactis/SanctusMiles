@@ -149,6 +149,10 @@ public class StateMachineDIA
             {
                 MonoHelper.instance.StopCoroutine(updateCoroutine);
             }
+            if (fixedUpdateCoroutine != null)
+            {
+                MonoHelper.instance.StopCoroutine(fixedUpdateCoroutine);
+            }
             currentState.OnExit();
         }
 
