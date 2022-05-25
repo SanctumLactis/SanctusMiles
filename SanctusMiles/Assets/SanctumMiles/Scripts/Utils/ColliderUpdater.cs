@@ -15,10 +15,16 @@ public class ColliderUpdater : MonoBehaviour
  
     void OnTriggerEnter2D(Collider2D other)
     {
-        collideEnter(gameObject, other);
+        if (collideEnter != null && gameObject != null && other != null)
+        {
+            collideEnter(gameObject, other);
+        }
     }
      
     void OnTriggerExit2D(Collider2D other) {
-        collideExit(gameObject, other);
+        if (collideExit != null && gameObject != null && other != null)
+        {
+            collideExit(gameObject, other);
+        }
     }
 }
