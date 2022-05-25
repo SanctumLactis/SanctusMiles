@@ -153,7 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf68f98572a3eb4a9f3b53e2d148839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
-  cameraSystemPrefab: {fileID: 0}
+  playerPrefab: {fileID: 3281677409336062820, guid: 8a76c01b57c81c94799f87c41cb03105, type: 3}
+  cameraSystemPrefab: {fileID: 3238174245455553151, guid: 81b5d0c0a335007499b6924e3bb28492, type: 3}
+  forcePlayerCount: 0
   defaultPlayerCount: 2
-  playersAlive: 0
+  gameOverPrefab: {fileID: 5428996354096335842, guid: f99b8bd7bc7bd3841aed5f633db2b58c, type: 3}

@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     private GameObject cameraSystem;
     private CinemachineTargetGroup targetGroup;
 
-    [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject gameOverPrefab;
+    private GameObject gameOver;
 
     public static GameManager instance;
 
@@ -41,13 +42,19 @@ public class GameManager : MonoBehaviour
         Vector3 player1Spawn = transform.GetChild(0).GetChild(0).position;
         Vector3 player2Spawn = transform.GetChild(0).GetChild(1).position;
 
-        players = new GameObject();
-        players.name = "Players";
-
+        // Initialize Camera System
         cameraSystem = Instantiate(cameraSystemPrefab);
 
         targetGroup = cameraSystem.transform.GetComponentInChildren<CinemachineTargetGroup>();
         
+        // Create Game Over Screen
+        gameOver = Instantiate(gameOverPrefab);
+        gameOver.SetActive(false);
+        
+        // Create Players
+        players = new GameObject();
+        players.name = "Players";
+
         CreatePlayer(player1Spawn);
 
         if (PlayerPrefs.GetInt("playerCount") == 2)
