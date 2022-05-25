@@ -6,11 +6,16 @@
     margin-right: auto;
     text-align: center
 }
+/* Her er CSS-en som jeg bruker for alle tekst elementene,
+her er bare enkle definisjoner av farge, størrelse og plassering i nettsiden. */
 
 #defaultHeadline {
     color:#ffa500; text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;font-size: 40px;
 }
+/* Her er CSS-en min for alle overskriftene, her er det enda enklere definisjoner av størrelse, farge og plassering.
+Disse CSS kodene blir lagret i en «ID», du kan se om det er en ID ved å se om det er en # i begynnelsen av navnet.
+ */
 
 #sidenav {
     font-size:2vw;cursor:pointer;
@@ -19,18 +24,18 @@
 
 /* Galleri CSS */
 
-/* Posisjonen til galleriet */
 .container {
   position: relative;
 }
+/* Her har vi litt mer enkel CSS som definerer hvordan forskjellige elementer i bildegalleriet skal se ut.
+Først gjør vi slik at containeren og selve bildene ligger i midten av nettleseren.
+ */
       
-/* gjør at alle bildene er gjemt */
 .mySlides {
   display: none;
   text-align: center;
 }
       
- /* Fixer knappene for å gå frem og tilbake i galleriet */
 .prev,
 .next {
   cursor: pointer;
@@ -43,22 +48,22 @@
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
 }
+/* Så definerer vi hvordan de to pilene til høyre og til venstre skal se ut,
+her det bare enkle ting som f.eks, hvilken farge de har og hvor store de er. */
       
-/* Gjør at fremover knappen i gallereiet er til høyre */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+/* Siden begge pilene til nå bare ligger på venstre side av nettleseren, endrer vi her på hvor den befinner seg. */
       
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
 }
+/* Her endrer vi på bakgrunnsfargen ser ut når vi holder musen over, her blir den endret til svart. */
       
-/* teksten til nummerne til bildene */
 .numbertext {
   color: #cf7500;
   font-size: 25px;
@@ -67,3 +72,5 @@
   text-align: center;
   top: 0;
 }
+/* Til slutt I CSS dokumentet definerer jeg hvordan tallene over hvert bilde ser ut.
+Her det nok en gang enkle definisjoner av farge og størrelse og slik. */

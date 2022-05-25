@@ -21,6 +21,13 @@ overflow-x: hidden;
 transition: 0.5s;
 padding-top: 60px;
 }
+/*
+ved å skrive .sidenav lager vi en klasse som vi kan
+lagre informasjon inne i helt til vi trenger det senere.
+I .sidenav definerer jeg hvordan bakgrunnen av menyen
+skal se ut, altså det som ligger under de forskjellige
+linkene du skal kunne trykke
+*/
 
 .sidenav a {
 padding: 8px 8px 8px 32px;
@@ -30,10 +37,31 @@ color:#ffa500;
 display: block;
 transition: 0.3s;
 }
+/*
+Her har vi skrevet inn «.sidenav a». Dette vil bli
+som om du har laget en mappe inne i en mappe
+der du kan lagre ny informasjon uten at det
+skaper konflikter med innholdet i hovedmappen.
+.sidenav a definerer hvordan teksten som skal vises
+inne I menyen ser ut, her kan jeg endre farge og
+for eksempel posisjon.
+*/
 
 .sidenav a:hover {
 color: #f1f1f1;
 }
+/*
+«.sidenav a:hover» kan du si blir nesten som å
+lage en fil inne i en av mappene dine som kan
+kommunisere med resten av innholdet i mappen.
+Her gjør koden slik at når du tar musen over innholdet
+I «.sidenav a», altså tekst elementene i menyen,
+Kommer teksten til å endres etter hva koden sier.
+I dette tilfellet vil jeg bare endre fargen til teksten
+når du tar musen over.
+Kan også nevne at «transition: 0.3s;» i «.sidenav»
+endrer hvor raskt teksten din blir endret.
+*/
 
 .sidenav .closebtn {
 position: absolute;
@@ -42,11 +70,32 @@ right: 25px;
 font-size: 36px;
 margin-left: 50px;
 }
+/*
+ved å skrive «.sidenav .closebtn» lager du en klasse
+I en klasse. Grunnen til at vi gjør dette, er at vi vil
+kalle inn menyens lukkeknapp senere i koden seperat
+fra .sidenav.
+Selve koden inne i .closebtn bare definerer
+hvor “X” står i menyen, og størrelse.
+*/
 
 @media screen and (max-height: 450px) {
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
 }
+/*
+@media er noe vi bruker for å inkludere CSS kode
+hvis spesifiserte krav blir oppfylt
+Kravene settes i parantes etter @media regelen,
+og i dette tilfellet, er kravet av den maksimale høyden
+til menyen skal være 450px eller mindre.
+Under dette skal du skrive inn koden du vil
+skal bli aktivert hvis kravet er oppfylt,
+i dette tilfellet vil jeg redusere størrelsen
+på teksten og endre dens posisjon litt slik at alt blir
+mindre hvis nettleseren din blir mindre.
+Dette er bare for å forbedre brukererfaringen
+*/
 
 .background {
   background-image: url("websiteassets/Pictures/titlescreen.png");
@@ -56,6 +105,13 @@ margin-left: 50px;
   background-repeat: no-repeat;
   background-size: 100%;
 }
+/*
+Her er koden min for bakgrunnsbildet som ligger i toppen av nettsiden
+Først legger jeg inn linken til bildet jeg bruker som bakgrunn.
+Så definerer jeg max høyde på det vinduet som bakgrunnen vises i.
+Så setter jeg posisjon på bildet.
+«no-repeat» betyr at bildet bare vises én gang, i stedet for å multiplisere seg selv.
+*/
 
 </style>
 
@@ -63,32 +119,56 @@ margin-left: 50px;
 
 </head>
 
-<body bgcolor="#04011b">
+<body bgcolor="#04011b"> <!-- Setter bakgrunnsfargen på nettsiden -->
+
   <div id="mySidenav" class="sidenav">
+<!-- Her kaller jeg inn hele «mappen» (.sidenav) inne i en ny id (mySidenav)
+som inneholder alle definisjonene på alle elementene i menyen, inkludert menyen selv -->    
+
     <a href="javascript:void(0) class="closebtn onclick="closeNav()">&times;</a>
+<!-- Her kaller vi inn en javascript funksjon når vi trykker på lukkeknappen til menyen
+    Det som skjer i funksjonen bli definert lenger nede -->
+
     <a href="websiteassets/eldin.html" target="_blank"> Eldin</a>
     <a href="websiteassets/geir.html" target="_blank">Geir</a>
     <a href="websiteassets/jonas.html" target="_blank">Jonas</a>
     <a href="websiteassets/jens.html" target="_blank">Jens</a>
+<!-- Her setter jeg inn de forskjellige tingene du kan trykke på inne i selve menyen
+    I form av tekstelementer utstyrt med en hyperlink til en html fil som ligger i mappen "websiteassets"
+    som tar deg over til en sub-side av ditt valg
+   -->
   </div>
     
   <span id="sidenav" onclick="openNav()">&#9776;<p;>Dokumentasjon</p></span>
+  <!-- Her kaller vi inn javascript funksjonen for å åpne selve menyen fra nettsiden
+	Da lager jeg bare et tekstelement på fremsiden som jeg legger til javascript funksjonen som
+	Blir definert under.
+ -->
 
   <script>
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
-  
+  /* I denne funksjonen bruker vi getElementById til å hente inn .sidenav klassen som vi puttet
+	Inni en id slik at dette fungerer. Ved bruk av «style.width» kan jeg sette hvor bred menyen skal
+	Være når den blir kalt inn, siden det ikke er blitt definert før nå.
+ */
+
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+/* Her gjør vi det samme, bare at vi setter bredden på «0» slik at den forsvinner helt
+	Og vi slipper å tenke på den
+ */
+
   </script>
      
-  <h1><p id="defaultHeadline">Sanctus Miles</p></h1>
+  <h1><p id="defaultHeadline">The Adventures Of Pixel Knight</p></h1>
+    <!-- Her gjør jeg slik at dette <h1> elementet får effektene av ID-en "defaultHeadline" som er laget i CSS dokumentet mintt -->
 
   <table id="defaultText">
     <tr>
-      <td><label>Sanctus Miles er et Top-Down PvE spill som går ut på å sloss og drepe fiender på forskjellige etasjer i et slott
+      <td><label>The Adventures Of Pixel Knight er et Top-Down PvE spill som går ut på å sloss og drepe fiender på forskjellige etasjer i et slott
                                     ved bruk av våpnene du er tildelt. Det er totalt 6 nivåer der den første er for å lære deg hvordan du spiller spillet.
                                     De andre nivåene er action-fylte rom der du må løpe rundt å drepe zombier som kommer etter deg med blodtørstig sult
                                     mens du slåss for å holde deg i live lenge nok til å eventuelt møte lederen bak de råtne hordene.
@@ -104,7 +184,7 @@ margin-left: 50px;
                                     er ingen andre enn de selvelste "Store Tre", som de blir kalt av hele verdens ledere. 
                                     Deres navn er: Carl Erik, Arvid Ranestad og Randi Roth, og er verdens mest berømte og velstående spill-kritikere.
                                     </br></br>
-                                    Under kan du se traileren som ble laget for Sanctus Miles, som hadde et budsjett på 36 millioner amerikanske dollar,
+                                    Under kan du se traileren som ble laget for  The Adventures Of Pixel Knight, som hadde et budsjett på 36 millioner amerikanske dollar,
                                     og er skreddersydd av verdens ledende film-redaktører fra Hollywood. 
                                     
                                   
@@ -119,10 +199,15 @@ margin-left: 50px;
 style='display: block; margin: 0 auto;'
 width="560" 
 height="315" 
-src="https://www.youtube.com/embed/d1YBv2mWll0" 
+src="https://www.youtube.com/embed/oeTkUnmnKBk" 
 title="Informational video about our game" 
 frameborder="0" 
 allowfullscreen></iframe>
+<!-- Iframe (Inline frame) er en kode som gjør at du kan legge inn elementer fra andre steder, 
+        for eksempel andre nettsider. Dette har jeg da brukt for å legge inn placeholder videoer fra youtube, 
+        slik at jeg eventuelt kan bytte dem ut med videoer om spillet våres (trailer, video guide). 
+        For å få tak i denne koden, gikk jeg inn på en youtube video, og brukte share knappen til å skaffe embed koden
+        som blir utlevert av youtube.-->
   
   
 <table id="defaultText">
@@ -169,30 +254,57 @@ allowfullscreen></iframe>
       <img src="websiteassets/Pictures/galleri/galleri6.jpg" style="width:25%">
   </div>
 
-  <!-- Piler for å gå frem å tilbake mellom bildene -->
+  <!-- Vi begynner med å lage en klasse som heter «mySlides» der vi kan legge inn bildene
+Vi ønsker å inkludere i bildegalleriet. Dette er da bilder jeg har personlig tatt ut fra spillet.
+Grunnen til at alle bildene ikke blirl lagt til i samme <div> er fordi vi må gi hvert bilde en spesifikk «numbertext» 
+i tillegg, slik at vi kan bruke det til å identifisere dem.
+ -->
+
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+<!-- Her lager vi klasser for de to pilene som lar deg bla frem og tilbake mellom bildene.
+Her legge vi også inn «onclick» som gjør at elementer som blir tildelt
+Denne klassen kan kjøre kode når du trykker på dem.
+Selve koden som blir kjørt for klassene «prev» og «next» går ut på å
+Endre verdien av «plusSlides» med 1 eller -1.
+Når dette blir paret med en index som blir lagd senere,
+vil det la oss bla gjennom alle bildene i «showSlides»
+ -->
+  
 </div>
 
 <script>
   let slideIndex = 1;
 showSlides(slideIndex);
+/* Her lager vi en variabel som vi gir verdien 1 og som vi «kobler på» klassen med alle bildene våres inni
+Dette gjør slik at vi får en index som vi kan bruke sammen med «showSlides» så vi kan vise et spesielt bilde hver gang verdien til indexen endres.
+ */
 
-// gjør at frem og tilbake knappene fungerer
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+/* Her lager vi funksjonen for «plusSlides» slik at «prev» og «next» klassene kan gjøre noe.
+Her gjør vi slik at for hver gang du trykker på enten pilen frem eller tilbake i bildegalleriet,
+Vil verdien til slideIndex bli endret basert på om du trykket bakoverpilen eller fremoverpilen.
 
-// Gjør at du kan se hovedbildet du er på
+Siden vi allerede har definert at «slideIndex» er 1, vil ett trykk på fremoverpilen endre den verdien til 2, hvis du da trykke bakoverpilen, går verdien tilbake til 1.
+ */
+
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+/* Her lager vi en funksjon som lar oss se bildene med hjelp av mer kode under.
+Denne koden sier egentlig bare at «currentSlide» sjekker tallet som nå ligger i indexen, og lagrer det til senere bruk
+ */
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("demo");
+  /* Her lager vi et par variable som vi kan bruke i koden under til å lagre å endre informasjon.
+Den ene variabelen: «mySlides» inneholder alle bildene vi har tidligere lagt til.
+ */
 
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -206,6 +318,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 } 
+/* Denne koden er det som faktisk endrer bildene når du trykker på en av pilene.
+Du kan se at vi bruker en «slideIndex» og den nye variabelen «slides»  til å endre hvilket bildet som blir vist ved hjelp av «style.display», som da viser frem det bildet som matcher tallet som står i indexen til enhver tid.
+ */
+
 </script>
   
 <table id="defaultText">
@@ -214,16 +330,25 @@ function showSlides(n) {
       <label>Nå som du har fått en liten sneak peak på hva dette spillet har å tilby, er det nå på tide å spillet spillet for deg selv.
                   Siden spillet ikke er blitt offisielt lansert helt enda kan man ikke finne det på de store spillfordelings-nettsidene som Steam,
                   er du nødt til å gå til spesielle kilder for å få spillt spillet tidlig. Heldigvis har vi klart å få tillatelse fra utviklerene
-                  slik at vi kan legge til en nedlastningslink for spillet på denne siden. Så hvis du ønsker å spillet spillet, ligger det her:
+                  slik at vi kan legge til en nedlastningslink for spillet på denne siden. Så hvis du ønsker å spillet spillet, kan du trykke på bildet under:
                   </br></br>
+                  <!-- Her har jeg én av flere tekstbokser skapt gjennom «table», 
+                  som alle har fått CSS ID-en «defaultText» pekt mot dem. 
+                  defaulText» er en ID som jeg har laget inne i en egen CSS fil som inneholder alt av
+                  hvordan jeg vil at f.eks tekst skal se ut. Mer om det senere i CSS filen -->
 
                   <a href="Pictures/test.txt" download>
                   <img src="websiteassets/Pictures/Title screen.png" alt="Dokumentasjonen til Jens">
                   </a>
+                  <!-- Under denne spesifike tekstboksen, (og et par andre) har jeg lagt til denne korte koden.
+                  Det dette gjør er at jeg kan skrive inn en fil som jeg vil laste ned (med bruk av «a href «____» download)
+                  Og gjør slik at du kan trykke på et bilde eller tekst for å laste den filen ned.
+                  Da bruker jeg «img src» til å gi linken til et bilde o.l, og «alt» til å gi et alternativ hvis det bildet ikke skulle fungere.
+ -->
 
                   </br></br>
                   Hvis du har problemer med å bli vandt til spillet og trenger noen frampek eller tips
-                  har utviklerene av spillet vært snille nok til å lage en video-tutorial som du kan se på
+                  har utviklerene av spillet vært snille nok til å lage en kort video-guide som du kan se på
                   hvis du sitter fast
                   </br></br></br></br></br></br>
       </label>
@@ -235,7 +360,7 @@ function showSlides(n) {
 style='display: block; margin: 0 auto;'
 width="560" 
 height="315" 
-src="https://www.youtube.com/embed/d1YBv2mWll0" 
+src="https://www.youtube.com/embed/oeTkUnmnKBk" 
 title="YouTube video player" 
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
