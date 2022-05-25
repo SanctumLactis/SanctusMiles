@@ -19,11 +19,13 @@ public class gameover : MonoBehaviour
 
     public void Restart()
     {
+        PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene(2);
     }
 
     public void MainMenu()
     {
+        PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene(0);
     }
 }

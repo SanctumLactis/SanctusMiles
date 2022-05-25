@@ -11,12 +11,12 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        scoreText.text = "Current Score: 0";
+        scoreText.text = "Score: 0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Current Score: " + PlayerPrefs.GetInt("score").ToString();
+        scoreText.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
     }
 }
