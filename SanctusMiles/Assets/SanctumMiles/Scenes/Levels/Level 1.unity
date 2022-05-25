@@ -566,10 +566,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -714,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269980585}
   m_LocalRotation: {x: -0, y: -0, z: -0.25257602, w: 0.96757704}
-  m_LocalPosition: {x: -2.289363, y: -3.9765341, z: 0}
+  m_LocalPosition: {x: -2.289363, y: -3.9765341, z: -0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -839,10 +835,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -1122,10 +1114,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -1195,10 +1183,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -1920,10 +1904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -2222,10 +2202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -3388,10 +3364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -3550,7 +3522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267621431}
   m_LocalRotation: {x: -0, y: -0, z: 0.50761354, w: 0.86158484}
-  m_LocalPosition: {x: -1.1838722, y: -4.8705893, z: 0}
+  m_LocalPosition: {x: -1.1838722, y: -4.8705893, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3564,10 +3536,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -3926,10 +3894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -4104,10 +4068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -4177,10 +4137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -4609,10 +4565,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0
@@ -5316,10 +5268,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 689823331818814386, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -20327,10 +20275,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1888231264}
     m_Modifications:
-    - target: {fileID: -1599810746059181365, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
-      propertyPath: audioSourceDeath
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2434054686594739820, guid: 12dcbe5807d8bb94d85e1277eca895ba, type: 3}
       propertyPath: Loop
       value: 0

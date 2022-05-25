@@ -8,7 +8,7 @@ public class HealthData : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float regenAmount = 1f;
     [SerializeField] private float regenSpeed = 0.5f;
-    [SerializeField] private float health;
+    [SerializeField] public float health;
     public float GetHealth() { return health; }
 
     private Rigidbody2D rigidBody;
@@ -26,6 +26,7 @@ public class HealthData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (health > maxHealth)
             health = maxHealth;
         
@@ -64,4 +65,6 @@ public class HealthData : MonoBehaviour
         }
         return health;
     }
+
+
 }
