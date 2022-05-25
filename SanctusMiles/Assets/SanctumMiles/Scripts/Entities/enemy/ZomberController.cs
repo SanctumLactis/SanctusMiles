@@ -49,4 +49,11 @@ public class ZomberController : MonoBehaviour
     {
         rigidBody.AddForce(transform.right * moveSpeed * Time.deltaTime, ForceMode2D.Force);
     }
+
+    void OnDestroy()
+    {
+        // Increase the score of the player when dead
+        int currentScore = PlayerPrefs.GetInt("score");
+        PlayerPrefs.SetInt("score", currentScore + 1);
+    }
 }

@@ -114,8 +114,6 @@ public class PlayerController : MonoBehaviour
     public void OnTurn(InputAction.CallbackContext context)
     {
         turn = context.ReadValue<float>();
-
-        
         // Debug.Log("Turn: " + turn);
     }
 
@@ -201,26 +199,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator swinganimation()
-    {
-
-        
-        yield return new WaitForSeconds(1);
-    }
-
     private void AttackEnemies(string attackType, float damage)
     {
         Debug.Log("attacking enemies");
         List<KeyValuePair<string, GameObject>> enemiesInRange = GetEnemiesInAttackRange();
         foreach (KeyValuePair<string, GameObject> enemyInRange in enemiesInRange)
         {
-            if (enemyInRange.Key == attackType)
+            if (enemyInRange.Key != null && enemyInRange.Value != null)
             {
-                Debug.Log(enemyInRange.Value.name);
-                enemyInRange.Value.GetComponent<HealthData>().DoDamage(damage);
-                audioSourceHit.Play(0);
+                if (enemyInRange.Key == attackType)
+                {
+                    Debug.Log(enemyInRange.Value.name);
+                    audioSourceHit.Play(0);
+
+                    float remainingHealth = enemyInRange.Value.GetComponent<HealthData>().DoDamage(damage);
+                }
             }
-            
         }
     }
 
@@ -229,10 +223,13 @@ public class PlayerController : MonoBehaviour
         List<KeyValuePair<string, GameObject>> enemiesInRange = new List<KeyValuePair<string, GameObject>>();
         foreach (KeyValuePair<GameObject, Collider2D> collision in colliderManager.GetCollisions())
         {
-            if (collision.Value.gameObject.tag == "Enemy Hurtbox")
+            if (collision.Key != null && collision.Value != null)
             {
-                Debug.Log(collision.Key.name + " " + collision.Value.gameObject.name);
-                enemiesInRange.Add(new KeyValuePair<string, GameObject>(collision.Key.name, collision.Value.transform.parent.parent.gameObject));
+                if (collision.Value.gameObject.tag == "Enemy Hurtbox")
+                {
+                    Debug.Log(collision.Key.name + " " + collision.Value.gameObject.name);
+                    enemiesInRange.Add(new KeyValuePair<string, GameObject>(collision.Key.name, collision.Value.transform.parent.parent.gameObject));
+                }
             }
         }
         return enemiesInRange;

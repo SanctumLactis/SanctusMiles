@@ -28,10 +28,13 @@ public class ZomberIdleState : StateDIA
     {
         foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
-            if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
+            if (collision.Key != null && collision.Value != null)
             {
-                Debug.Log("Detected Player - Self: " + main.gameObject.name + " | Collider: " + collision.Key.name + " | Other: " + collision.Value.gameObject.name);
-                main.stateMachine.SwitchState(main.combatState);
+                if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
+                {
+                    Debug.Log("Detected Player - Self: " + main.gameObject.name + " | Collider: " + collision.Key.name + " | Other: " + collision.Value.gameObject.name);
+                    main.stateMachine.SwitchState(main.combatState);
+                }
             }
         }
     }

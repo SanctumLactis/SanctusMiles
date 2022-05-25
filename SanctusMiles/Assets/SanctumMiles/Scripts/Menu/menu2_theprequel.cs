@@ -32,6 +32,7 @@ public class menu2_theprequel : MonoBehaviour
     public void StartGame(int playerCount)
     {
         PlayerPrefs.SetInt("playerCount", playerCount);
+        PlayerPrefs.SetInt("score", 0);
 
         SceneManager.LoadScene(1);
     }

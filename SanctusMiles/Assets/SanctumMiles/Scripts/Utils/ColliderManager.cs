@@ -12,7 +12,6 @@ public class ColliderManager : MonoBehaviour
     {
         collisions.RemoveAll(collision => collision.Value == null);
         return collisions;
-        
     }
 
     // Start is called before the first frame update

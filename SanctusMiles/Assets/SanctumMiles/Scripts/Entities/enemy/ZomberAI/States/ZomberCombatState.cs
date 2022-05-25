@@ -51,10 +51,13 @@ public class ZomberCombatState : StateDIA
         List<GameObject> _playersVisible = new List<GameObject>();
         foreach (KeyValuePair<GameObject, Collider2D> collision in main.GetCollisions())
         {
-            if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
+            if (collision.Key != null && collision.Value != null)
             {
-                playerDetected = true;
-                _playersVisible.Add(collision.Value.gameObject);
+                if (collision.Key.name == "View Distance" && collision.Value.gameObject.tag == "Player Hurtbox")
+                {
+                    playerDetected = true;
+                    _playersVisible.Add(collision.Value.gameObject);
+                }
             }
         }
         playersVisible = _playersVisible;

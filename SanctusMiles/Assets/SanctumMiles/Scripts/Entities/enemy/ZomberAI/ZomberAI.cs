@@ -74,4 +74,9 @@ public class ZomberAI : MonoBehaviour
     {
         return colliderManager.GetCollisions();
     }
+
+    void OnDestroy()
+    {
+        stateMachine.KillStateMachine();
+    }
 }
