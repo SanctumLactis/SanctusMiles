@@ -31,5 +31,6 @@ public class gameover : MonoBehaviour
     {
         PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene(0);
+        levelmusicScript.Instance.gameObject.GetComponent<AudioSource>().Pause();
     }
 }
