@@ -92,9 +92,9 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(rigidBody.velocity.magnitude);
 
         if(rigidBody.velocity.magnitude > 0.5) //Make This a small number
-                audioSource.volume = 0.5f;
+            audioSource.volume = 0.5f;
         else
-                audioSource.volume = 0f;
+            audioSource.volume = 0f;
     }
 
     void FixedUpdate()
@@ -174,11 +174,6 @@ public class PlayerController : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                // Action Started
-                //if (playerCollider.IsTouching(doorTrigger))
-                //{
-                //    SceneManager.LoadScene(levels[1]);
-                //}
                 if (timer < 0)
                 {
                     anim.CrossFadeInFixedTime("SpecialAttack", 0);

@@ -36,7 +36,9 @@ public class ZISSWander : SubStateDIA
         waitThenStandStill = MonoHelper.instance.StartCoroutine(WaitThenStandStill());
 
         // Get a random position within the wander area
-        wanderPosition = new Vector3(wanderArea.x + UnityEngine.Random.Range(-wanderRange, wanderRange), wanderArea.y + UnityEngine.Random.Range(-wanderRange, wanderRange), 0);
+        wanderPosition = new Vector3(wanderArea.x + UnityEngine.Random.Range(-wanderRange, wanderRange),
+                                     wanderArea.y + UnityEngine.Random.Range(-wanderRange, wanderRange),
+                                     0);
     }
 
     // Runs every frame the state is active
