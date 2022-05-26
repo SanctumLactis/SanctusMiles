@@ -14,7 +14,7 @@ def index():
 
 @apply_metrics(endpoint="/home")
 @mod.route("/home")
-def home(user):
+def home():
     return redirect(url_for("index.index"))
 
 
