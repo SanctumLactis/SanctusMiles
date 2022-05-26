@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class gameover : MonoBehaviour
 {
+
+    private GameObject endgameSoundye;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        endgameSoundye = GameObject.FindWithTag("endgameSoundTag");
+        endgameSoundye.SetActive(false);
     }
 
     // Update is called once per frame

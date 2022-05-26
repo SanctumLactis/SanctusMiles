@@ -7,9 +7,9 @@ public class BOSS : MonoBehaviour
 
     public int numObjects = 10;
     public GameObject zomberPrefab;
-    public GameObject crazyZomberParent;
-    public GameObject crazyZomberParent2;
-    public GameObject victory;
+    public GameObject crazyZomberParentt;
+    public GameObject crazyZomberParentt2;
+    //public GameObject victory;
     private HealthData healthData;
 
     // Start is called before the first frame update
@@ -35,23 +35,24 @@ public class BOSS : MonoBehaviour
     IEnumerator crazyZomberAttack()
     {
         yield return new WaitForSeconds(10);
-        crazyZomberParent.SetActive(true);
+        crazyZomberParentt.SetActive(true);
         yield return new WaitForSeconds(10);
-        crazyZomberParent.SetActive(true);
+        crazyZomberParentt2.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(healthData.health < 500)
+        //Debug.Log(healthData.health);
+        if(healthData.health < 1000)
             StartCoroutine(crazyZomberAttack());
 
-        if(healthData.health <= 0)
-        {
-            victory.SetActive(true);
-            crazyZomberParent.SetActive(false);
-            crazyZomberParent2.SetActive(false);
-            //Time.timeScale = 0;           
-        }
+        //if(healthData.health <= 0)
+        //{
+        //    victory.SetActive(true);
+        //    crazyZomberParent.SetActive(false);
+        //    crazyZomberParent2.SetActive(false);
+        //    //Time.timeScale = 0;           
+        //}
     }
 }

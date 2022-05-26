@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SanctumMiles/Scenes/Levels/Level 3.unity
     guid: 083b591b676d5bf4ca73544fd34c65ef
+  - enabled: 1
+    path: Assets/SanctumMiles/Scenes/Levels/Level 4.unity
+    guid: 6505ceeed7df0a448bab57922edb627a
   m_configObjects: {}
